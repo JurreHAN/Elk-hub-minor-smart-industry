@@ -1,16 +1,17 @@
     document.addEventListener('DOMContentLoaded', (event) => {
         // Lijst met afbeeldingspaden - **DEZE MOET JE AANPASSEN!**
         const images = [
-            '../images/Cas.jpg', 
-            '../images/Jurre.jpg',
-            '../images/Milo.jpg'
+            '../images/elk-nijmegen-14.webp', 
+            '../images/van happen.jpg',
+            '../images/Renuwi.jpg',
+            '../images/bnext.jpg',
         ];
 
         console.error("testttttttt");
         let currentImageIndex = 0;
         // Nu weten we zeker dat 'background-slider' bestaat
         const slider = document.getElementById('background-slider');
-        const intervalTime = 5000; // 5 seconden wisselen
+        const intervalTime = 10000; // 10 seconden wisselen
 
         // We checken of het element echt gevonden is voordat we de slider starten
         if (slider) {

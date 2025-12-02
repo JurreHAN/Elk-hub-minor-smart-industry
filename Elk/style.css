@@ -6,6 +6,34 @@
     padding-bottom: 100px;
 }
 
+/* Plaats dit ná Bootstrap in je stylesheet */
+
+header#home a.btn.btn-ontdek {
+  background-color: #f8d200;    /* behoud achtergrond */
+  border-color: #f8d200;        /* behoud border */
+  color: #000;                  /* zwarte tekst */
+}
+
+/* zorg dat hover/focus/active ook zwart blijven */
+header#home a.btn.btn-ontdek:hover,
+header#home a.btn.btn-ontdek:focus,
+header#home a.btn.btn-ontdek:active,
+header#home a.btn.btn-ontdek:visited {
+  color: #000;
+  text-decoration: none; /* optioneel */
+}
+
+/* Als er alsnog een regel van hoger CSS-specificity of !important in de weg zit,
+   gebruik dan deze strengere versie (minder netjes maar werkt altijd): */
+header#home a.btn.btn-ontdek,
+header#home a.btn.btn-ontdek:hover,
+header#home a.btn.btn-ontdek:focus,
+header#home a.btn.btn-ontdek:active,
+header#home a.btn.btn-ontdek:visited {
+  color: #000 !important;
+}
+
+
 /* Stijl voor de container van de roterende achtergrond */
 #background-slider {
     position: absolute;
@@ -24,7 +52,7 @@
 /* Zorgt dat de tekst leesbaar is over de afbeeldingen */
 .hero h1, .hero p, .hero a.btn {
     color: white !important;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    font-weight: bold;
 }
 
 /* Zorgt dat de tekst van de header boven de afbeeldingen staat */
@@ -85,4 +113,5 @@ header.hero {
     background-color: #333; 
 }
 
-/* ... (CSS voor #background-slider en .hero h1/p) ... */
+
+
