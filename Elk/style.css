@@ -1,0 +1,88 @@
+/* Basisstijl voor de header sectie */
+.hero {
+    background-color: #333; /* Standaard achtergrondkleur */
+    min-height: 500px; /* Zorg voor voldoende hoogte */
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* Stijl voor de container van de roterende achtergrond */
+#background-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0; /* Begint verborgen */
+    transition: opacity 1.5s ease-in-out; /* Fade-effect */
+    z-index: 0;
+}
+
+/* Zorgt dat de tekst leesbaar is over de afbeeldingen */
+.hero h1, .hero p, .hero a.btn {
+    color: white !important;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* Zorgt dat de tekst van de header boven de afbeeldingen staat */
+.hero .container {
+    position: relative; 
+    z-index: 1;
+}
+
+    /* ====== Custom CSS ====== */
+    body {
+      background-color: #fbfcfc;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+
+    header.hero {
+      background: linear-gradient(135deg, #f9f9f8, #fbfcfa);
+      color: #fff;
+      padding: 6rem 0;
+    }
+
+    header.hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .feature-box {
+      background: #fff;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      transition: 0.3s;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      background: #0d1b2a;
+      color: #dee2e6;
+      padding: 2rem 0;
+    }
+
+    /* ... (andere stijlen) ... */
+
+/* Zorg dat de Hero sectie direct onder de bovenkant begint */
+header.hero {
+    /* Je kunt hier de padding top verhogen om ruimte te geven aan de absolute navbar */
+    padding-top: 100px; /* Dit is belangrijk! */
+    min-height: 500px;
+    position: relative; 
+    overflow: hidden;
+    background-color: #333; 
+}
+
+/* ... (CSS voor #background-slider en .hero h1/p) ... */
