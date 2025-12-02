@@ -113,5 +113,53 @@ header.hero {
     background-color: #333; 
 }
 
+.feature-link {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
 
+.feature-box {
+    border-radius: 8px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
 
+.feature-link:hover .feature-box {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Achtergrond overgang van wit naar foto */
+.contact-gradient-section {
+  position: relative;
+  background: linear-gradient(to right, white 15%, rgba(255,255,255,0) 60%), 
+              url("../images/lvs10.jpg") right center / cover no-repeat;
+  padding-top: 60px;
+  padding-bottom: 00px;
+  background-position: right bottom;  /* bottom */
+}
+
+/* Textbox: GEEN achtergrond meer */
+.contact-box {
+  padding: 0;        /* minder ruimte zodat tekst verder links begint */
+  margin-left: -60px; /* schuift alles verder naar links */
+}
+
+.gele-blok {
+  background-color: #FFD400;
+  clip-path: polygon(
+    0% 30%,   /* links boven */
+    10% 25%, 
+    20% 27%,
+    30% 22%, 
+    40% 23%, 
+    50% 20%, 
+    60% 25%, 
+    70% 23%, 
+    80% 27%, 
+    90% 30%, 
+    100% 28%, /* rechts boven */
+    100% 100%, /* rechts onder */
+    0% 100%    /* links onder */
+  );
+}
