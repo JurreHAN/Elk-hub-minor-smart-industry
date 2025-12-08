@@ -145,21 +145,3 @@ header.hero {
   margin-left: -60px; /* schuift alles verder naar links */
 }
 
-.gele-blok {
-  background-color: #FFD400;
-  clip-path: polygon(
-    0% 30%,   /* links boven */
-    10% 25%, 
-    20% 27%,
-    30% 22%, 
-    40% 23%, 
-    50% 20%, 
-    60% 25%, 
-    70% 23%, 
-    80% 27%, 
-    90% 30%, 
-    100% 28%, /* rechts boven */
-    100% 100%, /* rechts onder */
-    0% 100%    /* links onder */
-  );
-}
