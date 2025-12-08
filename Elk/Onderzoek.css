@@ -1,0 +1,74 @@
+
+/* HERO HEADER AFBEELDING */
+.hero-header {
+  height: 100vh; /* volledige schermhoogte */
+  background-image: url('../images/elk-nijmegen-14.webp'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Zorg dat navbar transparant is boven afbeelding */
+.navbar {
+  background: transparent !important;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Optionele overlay voor betere leesbaarheid */
+.hero-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+.navbar {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+.navbar,
+.navbar a,
+.navbar .nav-link {
+    color: white !important;
+}
+#diensten h3 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+#diensten p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+#diensten img {
+  border-radius: 15px;
+}
+#diensten h3 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+#diensten p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+#diensten img {
+  border-radius: 12px;
+}
+.btn-ontdek {
+  background-color: #f8d200; /* Gele achtergrond */
+  color: white;              /* Witte tekst */
+  border: none;              /* Geen rand */
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ontdek:hover {
+  background-color: #e0b800; /* Iets donkerder geel bij hover */
+  color: white;
+}
