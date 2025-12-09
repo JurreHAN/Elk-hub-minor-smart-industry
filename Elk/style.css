@@ -144,3 +144,8 @@ header.hero {
   padding: 0;        /* minder ruimte zodat tekst verder links begint */
   margin-left: -60px; /* schuift alles verder naar links */
 }
+
+#background-slider img:first-child {
+  opacity: 1 !important;
+  transition: none !important;
+}
