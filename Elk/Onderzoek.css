@@ -62,7 +62,7 @@
 }
 .btn-ontdek {
   background-color: #f8d200; /* Gele achtergrond */
-  color: white;              /* Witte tekst */
+  color: rgb(5, 5, 5);              /* Witte tekst */
   border: none;              /* Geen rand */
   font-weight: bold;
   transition: background-color 0.3s ease;
@@ -70,5 +70,8 @@
 
 .btn-ontdek:hover {
   background-color: #e0b800; /* Iets donkerder geel bij hover */
-  color: white;
+  color: rgb(16, 16, 16);
+}
+.hero-header .container {
+  padding-top: 200px; /* Verhoog dit getal voor meer ruimte */
 }

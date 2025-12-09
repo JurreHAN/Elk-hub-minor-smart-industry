@@ -10,7 +10,21 @@
 
     <!-- Custom CSS -->
     <style>
-      /* 🎨 Jumbotron banner stijl */
+      /* 🎨 Compacte navbar */
+      .navbar {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        min-height: 50px;
+        transition: top 0.3s; /* animatie bij scroll */
+      }
+      .navbar img {
+        height: 60px; /* kleiner logo */
+      }
+      .navbar-brand {
+        font-size: 1.2rem;
+      }
+
+      /* Jumbotron banner stijl */
       .jumbotron {
         position: relative;
         background-image: url("https://media-01.imu.nl/storage/5500/21374/responsive/8374221/de-top-6-beste-activiteiten-in-arnhem-2560x1100_2141_920.jpg");
@@ -18,9 +32,12 @@
         background-position: center;
         color: white;
         margin-bottom: 0;
-        min-height: 400px;       /* minimale hoogte */
+        min-height: 400px;
+
         display: flex;
-        align-items: center;      /* centreren verticale tekst */
+        align-items: flex-start; /* start iets lager */
+        justify-content: center;
+        padding-top: 120px; /* verticale ruimte boven de tekst */
       }
 
       /* Donkere overlay */
@@ -35,6 +52,7 @@
       .jumbotron .container {
         position: relative;
         z-index: 1;
+        text-align: center;
       }
 
       footer {
@@ -47,33 +65,36 @@
   </head>
   <body>
 
-    <!-- Han University of applied sciences -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="#">Milo Bergsma</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="mainNavbar">
+      <div class="container">
+        <a class="navbar-brand" href="#">Milo Bergsma</a>
 
-          <!-- ✅ Dropdown menu for API's -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="apiDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Api's
-            </a>
-            <div class="dropdown-menu" aria-labelledby="apiDropdown">
-              <a class="dropdown-item" href="weer.html">Weer van nu</a>
-              <a class="dropdown-item" href="NASA.html">NASA picture of the day</a>
-              <a class="dropdown-item" href="clash.html">Clash Royale statistieken</a>
-            </div>
-          </li>
-        </ul>
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Zoeken">
-          <button class="btn btn-outline-success" type="submit">Zoeken</button>
-        </form>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="apiDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Api's
+              </a>
+              <div class="dropdown-menu" aria-labelledby="apiDropdown">
+                <a class="dropdown-item" href="weer.html">Weer van nu</a>
+                <a class="dropdown-item" href="NASA.html">NASA picture of the day</a>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Rechtsboven logo -->
+          <a class="d-none d-lg-block ml-auto" href="#">
+            <img src="../images/han_university.svg" alt="Rechtsboven Afbeelding">
+          </a>
+        </div>
       </div>
     </nav>
 
@@ -81,9 +102,10 @@
     <div class="jumbotron">
       <div class="container">
         <h1 class="display-3">Smart Industries - Minor</h1>
-        <p>Deze website weergeeft de progressie en stappen die ik heb gemaakt tijdens deze minor.
+        <p>Deze website weergeeft de progressie en stappen die ik heb gemaakt tijdens deze minor.</p>
+        <p>
+          <a class="btn btn-primary btn-lg" href="../Elk/index.html" role="button">Ga terug naar elk® &raquo;</a>
         </p>
-        <p><a class="btn btn-primary btn-lg" href="../Elk/index.html" role="button">Check dit! &raquo;</a></p>
       </div>
     </div>
 
@@ -92,17 +114,17 @@
       <div class="row">
         <div class="col-md-4">
           <h2>Coderen</h2>
-          <p>Een groot onderdeel van deze minor is 'coderen', tijdens mijn 3 jaar als bedrijfskundige heb ik hier helaas niet zoveel kennis in opgedaan. Maar deze minor was de uitgelegen kans om mij hierin te ontwikkelen. Wil je wat meer weten over mijn cederingsreis? Klik dan hieronder.</p>
+          <p>Een groot onderdeel van deze minor is 'coderen'. Tijdens mijn 3 jaar als bedrijfskundige heb ik hier helaas niet zoveel kennis in opgedaan. Maar deze minor was de perfecte kans om mij hierin te ontwikkelen. Wil je meer weten over mijn coderingstraject? Klik hieronder.</p>
           <p><a class="btn btn-secondary" href="Coderen.html" role="button">Details &raquo;</a></p>
         </div>
         <div class="col-md-4">
           <h2>Plantenbak ontwerp</h2>
-          <p>Om verschillende technische onderwerpen te combineren, heb ik een 'plantenbak deluxe' gemaakt. Wil je weten wat dat is en hoe de weg hiernaartoe is velopen? Klik dan hieronder hieronder.</p>
+          <p>Om verschillende technische onderwerpen te combineren, heb ik een 'plantenbak deluxe' gemaakt. Wil je weten wat dat is en hoe het proces verliep? Klik hieronder.</p>
           <p><a class="btn btn-secondary" href="#" role="button">Details &raquo;</a></p>
         </div>
         <div class="col-md-4">
           <h2>Persoonlijke ontwikkeling</h2>
-          <p>Tijdens deze minor en voornamelijk het het project bij elk, heb ik doelen voor mijzelf gesteld met betrekking op persoonlijke ontwikkeling. Klik hieronder voor meer informatie!</p>
+          <p>Tijdens deze minor, vooral bij het project bij elk, heb ik doelen gesteld op het gebied van persoonlijke ontwikkeling. Klik hieronder voor meer informatie!</p>
           <p><a class="btn btn-secondary" href="#" role="button">Details &raquo;</a></p>
         </div>
       </div>
@@ -116,5 +138,22 @@
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scroll-hide navbar JS -->
+    <script>
+      let prevScrollpos = window.pageYOffset;
+      const navbar = document.getElementById("mainNavbar");
+
+      window.onscroll = function() {
+        let currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          navbar.style.top = "0"; // scroll up → navbar tonen
+        } else {
+          navbar.style.top = "-70px"; // scroll down → navbar verbergen
+        }
+        prevScrollpos = currentScrollPos;
+      }
+    </script>
+
   </body>
 </html>

@@ -1,0 +1,33 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>NASA APOD</title>
+  <link rel="stylesheet" href="NASA.css" />
+</head>
+<body>
+  <main>
+    <h1>Astronomy Picture of the Day</h1>
+    <form>
+      <label for="datepicker">Kies een datum:
+        <input id="datepicker" type="date">
+      </label>
+    </form>
+
+    <section class="title-section">
+      <h2 id="title"></h2>
+      <p id="date"></p>
+      <small id="copyright"></small>
+    </section>
+
+    <section id="media-section"></section>
+
+    <div class="description-div">
+      <p id="description"></p>
+    </div>
+  </main>
+
+  <script src="NASA.js"></script>
+</body>
+</html>

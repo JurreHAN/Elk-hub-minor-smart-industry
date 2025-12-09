@@ -1,0 +1,68 @@
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+body {
+  padding-top: 3.5rem;
+}
+.jumbotron {
+  position: relative;
+  background-image: url("https://cityadventures.nl/wp-content/uploads/2020/05/arnhem-activiteiten.jpg"); /* afbeelding van de site */
+  background-size: cover;
+  background-position: 50% 60%;
+  color: white;
+  margin-bottom: 0;
+}
+
+/* Donkere overlay voor betere leesbaarheid */
+.jumbotron::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+/* Tekst boven overlay */
+.jumbotron .container {
+  position: relative;
+  z-index: 1;
+}
+.jumbotron {
+  position: relative;
+  background-image: url("https://media-01.imu.nl/storage/5500/21374/responsive/8374221/de-top-6-beste-activiteiten-in-arnhem-2560x1100_2141_920.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  margin-bottom: 0;
+  min-height: 400px;       /* minimale hoogte */
+  
+  display: flex;
+  align-items: flex-start; /* tekst start iets onderaan ipv gecentreerd */
+  justify-content: center; /* horizontaal gecentreerd */
+  padding-top: 120px;      /* afstand vanaf bovenkant, pas aan naar wens */
+}
+
+.jumbotron::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.jumbotron .container {
+  position: relative;
+  z-index: 1;
+  text-align: center;      /* centreren van tekst en knop */
+}
+/* Kleinere navbar */
+.navbar {
+  padding-top: 0.25rem;   /* standaard was 0.5rem of meer */
+  padding-bottom: 0.25rem;
+  min-height: 50px;       /* optioneel: stel een minimale hoogte in */
+}
+
+/* Navbar-brand en logo kleiner maken */
+.navbar-brand {
+  font-size: 1.2rem;      /* iets kleiner merknaam */
+}
+
+.navbar img {
+  height: 60px;           /* logo iets kleiner dan 90px */
+}
