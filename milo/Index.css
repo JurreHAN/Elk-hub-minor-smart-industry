@@ -193,18 +193,52 @@ html, body {
     }
 
     .header-content {
-      position: absolute;
-      top: 15%;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-      color: white;
-      z-index: 2;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-      padding: 0 15px;
-      margin-top: 0; /* Verwijder mogelijke marge push */
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  padding: 0 15px;
+  
+  /* VOEG DIT TOE: */
+  margin-top: 0 !important; 
+  padding-top: 1px; /* Een 'hack' om margin-collapse te stoppen */
+}
+
+.header-content h1 {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Styling voor de gele navigatieknoppen */
+    .btn-pill {
+      border-radius: 50px;
+      font-weight: 600; /* Iets dikker voor betere leesbaarheid */
+      background-color: #f8d200;
+      color: #000;
+      border: 2px solid #f8d200;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-pill:hover {
+      background-color: #e2be00; /* Iets donkerder geel bij hover */
+      border-color: #e2be00;
+      color: #000;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
     }
 
-    .header-content h1 {
-      margin-top: 0; /* Voorkomt dat de titel de container wegduwt */
+    /* Zorgt dat het scrollen soepel gaat en niet achter de navbar stopt */
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px; 
     }
+
+    .scroll-header img {
+  object-position: center center; /* Standaard */
+  /* Of gebruik: */
+  object-position: top center; /* Toont meer van de bovenkant */
+}
