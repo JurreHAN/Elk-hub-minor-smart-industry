@@ -37,7 +37,14 @@
       align-items: center;
       padding: 3rem 0;
       background-color: #333; /* Pas eventueel aan of voeg een achtergrondafbeelding toe */
-    }
+      /* Vervang de onderstaande regels */
+  background-image: url('/images/Foto\ laptop.jpg'); /* Pad naar je afbeelding */
+  background-size: cover;       /* Zorgt dat de foto het hele blok vult */
+  background-position: center;  /* Centreert de foto */
+  background-repeat: no-repeat; /* Voorkomt herhalen van de foto */
+  position: relative;
+}
+    
   </style>
 </head>
 
@@ -69,10 +76,10 @@
 
 <header class="hero-header d-flex align-items-center">
   <div class="container text-white position-relative">
-    <h1 class="display-4 fw-bold">Het opleverdocument</h1>
-    <p class="lead mt-3">Een onderzoek voor elk®</p>
-    <p class="lead mt-3">Wil je graag het hele document lezen?</p>
-    <a href="/pad/naar/je-document.docx" class="btn btn-lg mt-3 btn-ontdek" download>
+    <h1 class="display-4 fw-bold">Het Power BI dashboard</h1>
+    <p class="lead mt-3">Op deze pagina zal worden uitgelegd hoe het Power BI dashboard in elkaar zit en waarvoor elk® het wil gebruiken.</p>
+    <p class="lead mt-3">Wil je graag het dashboard zelf bekijken? Download hier!</p>
+    <a href="Power BI dashboard.pbix" class="btn btn-lg mt-3 btn-ontdek" download>
       Ontdek meer
     </a>
   </div>
@@ -82,15 +89,22 @@
   <div class="row justify-content-center text-center">
     <div class="col-lg-8">
 
-      <h3 class="mb-4">Afwegingsfase</h3>
+      <h3 class="mb-4">Doel van het document</h3>
 
-      <p class="mb-5">
-        Om ervoor te zorgen dat data efficiënt kan worden overgedragen van de leveranciers naar elk®, 
-        is er een opleverdocument opgesteld. Dit document beschrijft de specificaties en vereisten 
-        waaraan de data moet voldoen om naadloos te integreren in het Power BI-dashboard van elk®. 
-        Het doel van dit document is om een gestandaardiseerde aanpak te bieden voor het verzamelen, 
-        formatteren en aanleveren van data, zodat elk® een helder inzicht krijgt in hun afvalstromen 
-        en gerelateerde statistieken. Om dit te realiseren is er goed gekeken naar de verschillende manieren waarop dat gedaan kon worden. Verschillende platformen zijn dan ook overwogen. Opties die overwogen waren zijn bijvoorbeeld Microsoft Forms, Microsoft power apps, de integratie van een API en Microsoft Excel.
+     <div class="row">
+      <div class="col-12 text-center mt-4">
+        <p class="lead">
+                    Voor elk® is een PowerBI dashboard ontwikkelt waarin overzichtelijk alle belangrijke afvalcijfers van elk® zijn weergegeven. Er is gebruikt gemaakt van PowerBI omdat elk® hier al reeds gebruik van maakt en ook medewerkers in dienst heeft die ervaring hebben met dit programma. Dit maakt het overdragen van de ontwikkelde applicatie aan elk® erg gemakkelijk. De cijfers die hieruit naar voor komen helpen elk® op verschillende manieren. Deze manieren zijn:
+          <div class="row justify-content-center">
+  <div class="col-md-8">
+    <ul class="list-group list-group-flush text-center lead">
+      <li class="list-group-item bg-transparent border-0"><strong>1. Ik wil mij ontwikkelen op gebied van techniek (niet alleen de deelproducten van deze minor maar ook techniek die bij het vraagstuk van het bedrijf past) en samen met mijn groepsgenoten een product opstellen waar elk® iets mee kan.</strong></li>
+      <li class="list-group-item bg-transparent border-0"><strong>2. Ik wil tijdens dit project goed in kaart brengen wat de organisatie en de verschillende stakeholders in het deelproduct willen en dat meenemen in het product. Dit om zo de juiste afweging te kunnen maken over welke technologie het meest past bij de verandering binnen het bedrijf.</strong></li>
+      <li class="list-group-item bg-transparent border-0"><strong>3. Ik wil graag beter de stakeholders betrekken bij de ontwikkelingen die ik doe binnen het project en vaker om tussentijdse feedback vragen. Dit om gerichter te werken en de verwachtingen van het product continu bij te stellen.</strong></li>
+    </ul>
+  </div>
+</div>      
+        Het ontwikkelde dashboard bestaat uit 3 pagina’s. Hieronder is voor elke pagina een toelichting gegeven.  
       </p>
 
       <img src="../images/Foto excel bestand.png"
@@ -133,11 +147,11 @@
 <div class="container py-5">
   <div class="row justify-content-center text-center">
     <div class="col-lg-8">
-      <h3>Het uiteindelijke Excel opleverdocument</h3>
+      <h3>Download het bestand</h3>
       <p>
-        We hebben a.d.h.v. de wensen en eisen van elk® en de functies die Power BI wilt hebben, het Excel bestand gemaakt. Hierin kunnen leveranciers de vesteging van elk® selecteren waarmee ze werken. De afvalstroom waarvan ze data willen/moeten leveren. De afvalstromen die ze moeten opleveren zijn zorgvulding geselecteerd door ons. Na veel met elk® te hebben overlegt, hebben we grootschalig onderzoek gedaan naar de verschillende afvalstromen, hoe deze worden verwerkt, hoeveel uitstoot dat veroorzaakt en welke stromen elk® wil meenemen in het dashboard. De uiteindelijke afvalstromen die zijn meegenomen zijn te zien in het dropdown menu van de kolom 'afvalstroom'. Ook de gewichten in tonnage en kosten in euro moeten worden genoteerd. Het volledige onderzoek naar de afvalstromen, uitstoot en verwerkingsmethode is terug te vinden in het onderzoeksbestand.
+        Hier kunt u de tekst plaatsen die uitleg geeft over het bestand dat hieronder gedownload kan worden.
       </p>
-      <a href="Excel leverancier voorbeeld.xlsx" class="btn btn-success btn-lg mt-3" download>
+      <a href="pad/naar/bestand.xlsx" class="btn btn-success btn-lg mt-3" download>
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-earmark-excel-fill me-2" viewBox="0 0 16 16">
           <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM5.884 6.68 8 9.219l2.116-2.54a.5.5 0 1 1 .768.641L8.651 10l2.233 2.68a.5.5 0 0 1-.768.64L8 10.781l-2.116 2.54a.5.5 0 0 1-.768-.641L7.349 10 5.116 7.32a.5.5 0 1 1 .768-.64z"/>
         </svg>
