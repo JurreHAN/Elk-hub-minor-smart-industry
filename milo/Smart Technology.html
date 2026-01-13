@@ -5,15 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Smart Industries - Minor</title>
 
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="Index.css">
 
   <style>
-    /* Ruimte voor fixed navbar */
+    /* Ruimte voor fixed navbar - AANGEPAST naar 0 om witte balk te verwijderen */
     body {
-      padding-top: 56px;
+      padding-top: 0;
       margin: 0;
+    }
+
+    /* 1. Gele bollen met zwarte tekst */
+    .step-circle {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto;
+      border-radius: 50%;
+      background-color: #f8d200 !important; /* Jouw gele kleur */
+      color: #000 !important;              /* Zwarte tekst */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      z-index: 1;
+      position: relative;
+    }
+
+    /* De basislijn (grijs) veranderen naar geel */
+    .stepper::before {
+      background-color: #f8d200 !important;
+      opacity: 0.5; /* Optioneel: iets lichter maken zodat de bollen eruit springen */
+    }
+
+    /* De voortgangslijn (blauw) veranderen naar geel */
+    .step:not(:last-child)::after {
+      background-color: #f8d200 !important;
+    }
+
+    /* 2. Fix voor de witte balk bovenin */
+    .header-content h1 {
+      margin-top: 0 !important;
     }
 
     /* Parallax header */
@@ -72,12 +103,12 @@
       margin-top: 60px;
       text-align: center;
     }
+
   </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
   <a class="navbar-brand" href="#">Milo Bergsma</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
@@ -97,28 +128,25 @@
 
 <main role="main">
 
-  <!-- HEADER MET SMOOTH PARALLAX EN OVERLAY -->
   <header class="scroll-header">
     <img src="Images/3D-Printer header.gif" alt="Header afbeelding">
     <div class="header-content">
       <h1 class="display-3">Smart Technology</h1>
-      <p class="lead">Op deze pagina wordt gekeken naar de technische deelporducten die ik tijdens deze minor heb ontwikkeld.</p>
+      <p class="lead">Op deze pagina wordt gekeken naar de technische deelproducten die ik tijdens deze minor heb ontwikkeld.</p>
     </div>
   </header>
 
-  <!-- CONTENT -->
   <div class="container marketing mt-5">
 
     <hr class="featurette-divider">
 
-    <!-- FEATURETTE 1 -->
     <div class="row featurette">
       <div class="col-md-7">
         <h2 class="featurette-heading">Wat moet ik opleveren?
-          <span class="text-muted">In de minor moesten we, om onze ontwikkeling aan te tonen, een bakje ontwerpen waarin de onderdelen voor de automatische plantenbak past.</span>
+          <span class="text-muted">In de minor moesten we, om onze ontwikkeling aan te tonen, een bakje ontwerpen waarin de onderdelen voor de automatische plantenbak passen.</span>
         </h2>
         <p class="lead">
-          Een onderdeel van deze minor is IoT, het internet of things. Dit is eigenlijk een netwerk van fysieke apparaten, voertuigen of ander objecten die zijn uitgerust met sensoren, software en met netwerkconnectiviteit. Hierdoor kunnen ze gegevens verzamelen, uitwisselen en communiseren via het internet. Hierover hebben wij ook verschillende lessen gehad en is een deel van deze minor op gebouwd. Namelijk: Het bouwen van een IoT-schakelaar die automatisch de lichtsensiviteit en aarde-vochtigheid vastlegd en zo nodig aanpast. Om dit te kunnen realiseren, heb ik een aantal dingen moeten doen. Deze stappen zullen hieronder worden toegelicht.
+          Een onderdeel van deze minor is IoT, het internet of things. Dit is eigenlijk een netwerk van fysieke apparaten, voertuigen of andere objecten die zijn uitgerust met sensoren, software en met netwerkconnectiviteit. Hierdoor kunnen ze gegevens verzamelen, uitwisselen en communiceren via het internet. Hierover hebben wij ook verschillende lessen gehad en is een deel van deze minor op gebouwd. Namelijk: Het bouwen van een IoT-schakelaar die automatisch de lichtsensitiviteit en aarde-vochtigheid vastlegt en zo nodig aanpast. Om dit te kunnen realiseren, heb ik een aantal dingen moeten doen. Deze stappen zullen hieronder worden toegelicht.
       </div>
       <div class="col-md-5">
         <img src="Images/Foto solderen.jpeg" alt="Basiskennis" class="img-fluid mx-auto small-img" style="max-height: 600px;">
@@ -127,7 +155,6 @@
 
     <hr class="featurette-divider">
 
-<!-- Stappenbalk -->
 <div class="stepper d-flex justify-content-between mt-4">
   <div class="step">
     <div class="step-circle">1</div>
@@ -139,7 +166,7 @@
   </div>
   <div class="step">
     <div class="step-circle">3</div>
-    <div class="step-label mt-2 text-center">Het ontwerpen van het onhulsel</div>
+    <div class="step-label mt-2 text-center">Het ontwerpen van het omhulsel</div>
   </div>
   <div class="step">
     <div class="step-circle">4</div>
@@ -153,22 +180,20 @@
 
     <hr class="featurette-divider">
 
-    <!-- FEATURETTE 3 -->
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
         <h2 class="featurette-heading">Het programmeren van het softwaresysteem</h2>
-        <p class="lead">Dit semester kregen wij, vooral voor de studenten die nog niet zoveel ervaring hadden met programmeren, les van Mathijs van der Vegt. Hij is een expert als het gaat om programmeren, in ieder geval in mijn ogen. A.d.h.v. verschillende lessen, online tutorials en de onderdelen, heb ik stap voor stap het programma geschreven. Langzamerhand begon het programma steeds meer vorm te krijgen. Het leuke hieraan was, dat ik het steeds kon testen met de diverse onderdelen die ik ter beschikking had. Zo kon ik bijvoorbeeld een lampje aan en uit zetten, data doorsturen naar mijn laptop of een OLED schermpje aanzetten en data daarop weergeven. Dit programmeren is verkoepelend met het onderdeel 'Smart Connection'.
+        <p class="lead">Dit semester kregen wij, vooral voor de studenten die nog niet zoveel ervaring hadden met programmeren, les van Mathijs van der Vegt. Hij is een expert als het gaat om programmeren, in ieder geval in mijn ogen. A.d.h.v. verschillende lessen, online tutorials en de onderdelen, heb ik stap voor stap het programma geschreven. Langzamerhand begon het programma steeds meer vorm te krijgen. Het leuke hieraan was, dat ik het steeds kon testen met de diverse onderdelen die ik ter beschikking had. Zo kon ik bijvoorbeeld een lampje aan en uit zetten, data doorsturen naar mijn laptop of een OLED schermpje aanzetten en data daarop weergeven. Dit programmeren is overkoepelend met het onderdeel 'Smart Connection'.
       </div>
       <div class="col-md-5 order-md-1">
         <img src="Images/Voorbeeld programmeren.png" alt="Tweede onderdeel" class="img-fluid mx-auto">
       </div>
     </div>
 
-<!-- Extra alinea binnen featurette 3 -->
 <div class="row mt-5">
   <div class="col-md-7 order-md-2">
     <p class="lead">
-       Ook leerde ik hoe technische componenten aan elkaar moesten worden verbonden en dat je goed rekening moet houden met de in- en output. Zo moet alles via de juiste aanluitingen aan elkaar verbonden zijn en moet je rekening houden met de type componenten waarmee je werkt. Verschillende componenten moesten aan elkaar verbonden worden. Zo heb je de ESP32, dat is een klein computertje die de componenten via mijn geschreven code kan aansturen. Verder zit er een waterpomp in, een licht sensor, vochtigheidssensor, een RF transmitter en een relay en nog andere kleine componenten die ervoor zorgen dat bijvoorbeeld de juiste hoeveelheid stroom wordt doorgestuurd. Deze onderdelen zorgen ervoor dat de benodigde informatie wordt verzameld en er gewenste acties kunnen plaatsvinden. Uiteindelijk had ik een werkende code die alle onderdelen aanstuurde en de relevante data ophaalde en naar een online dashboard stuurt. Maar zoals op de foto te zien in, is het nog een wirwar van draadjes en componenten. Niet erg functioneel nog.
+       Ook leerde ik hoe technische componenten aan elkaar moesten worden verbonden en dat je goed rekening moet houden met de in- en output. Zo moet alles via de juiste aansluitingen aan elkaar verbonden zijn en moet je rekening houden met de type componenten waarmee je werkt. Verschillende componenten moesten aan elkaar verbonden worden. Zo heb je de ESP32, dat is een klein computertje die de componenten via mijn geschreven code kan aansturen. Verder zit er een waterpomp in, een lichtsensor, vochtigheidssensor, een RF transmitter en een relay en nog andere kleine componenten die ervoor zorgen dat bijvoorbeeld de juiste hoeveelheid stroom wordt doorgestuurd. Deze onderdelen zorgen ervoor dat de benodigde informatie wordt verzameld en er gewenste acties kunnen plaatsvinden. Uiteindelijk had ik een werkende code die alle onderdelen aanstuurde en de relevante data ophaalde en naar een online dashboard stuurt. Maar zoals op de foto te zien is, is het nog een wirwar van draadjes en componenten. Niet erg functioneel nog.
     </p>
   </div>
 
@@ -182,12 +207,11 @@
 
     <hr class="featurette-divider">
 
-   <!-- FEATURETTE 4 -->
-    <div class="row featurette">
+   <div class="row featurette">
       <div class="col-md-7">
         <h2 class="featurette-heading">Het ontwerpen van het printplaatje 
         </h2>
-        <p class="lead">Zoals eerder al benoemd was, is het apparaat een beetje een wirwar van draadjes en componenten. Dit kunnen we verbeteren. Tijdens één van de workshops kregen wij uitleg van Mathijs van der Vegt over het programma Eagle. In dit programma kon ik een printplaatje designen die een hele hoop draadjes netjes wegwerkt en de compontenen een mooie plek geeft. In ben veel bezig geweest met het zo efficiënt mogelijk maken van de verbindingen en alles een goede plek te geven op het plaatje. Toen ik tevreden was met het design, heeft Mathijs het laten onwikkelen in China. In de afbeelding rechts is te zien hoe de schets van het printplaatsje eruitzag. Als je op de pijltjes klikt, kun je zien hoe het plaatje van schets, naar werkelijkheid gaat. Wederom ziet het er nog een beetje druk uit. Daarom is de volgende stap het ontwerpen van een mooi bakje waarin alle compontenten hun plek krijgen.</p>
+        <p class="lead">Zoals eerder al benoemd was, is het apparaat een beetje een wirwar van draadjes en componenten. Dit kunnen we verbeteren. Tijdens één van de workshops kregen wij uitleg van Mathijs van der Vegt over het programma Eagle. In dit programma kon ik een printplaatje designen die een hele hoop draadjes netjes wegwerkt en de componenten een mooie plek geeft. Ik ben veel bezig geweest met het zo efficiënt mogelijk maken van de verbindingen en alles een goede plek te geven op het plaatje. Toen ik tevreden was met het design, heeft Mathijs het laten ontwikkelen in China. In de afbeelding rechts is te zien hoe de schets van het printplaatje eruitzag. Als je op de pijltjes klikt, kun je zien hoe het plaatje van schets, naar werkelijkheid gaat. Wederom ziet het er nog een beetje druk uit. Daarom is de volgende stap het ontwerpen van een mooi bakje waarin alle componenten hun plek krijgen.</p>
       </div>
       <div class="col-md-5">
         <div id="pcbCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
@@ -239,12 +263,10 @@
 
   </div>
 
-  <!-- Linker pijl -->
   <a class="carousel-control-prev" href="#pcbCarousel" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </a>
 
-  <!-- Rechter pijl -->
   <a class="carousel-control-next" href="#pcbCarousel" role="button" data-slide="next">
     <span class="carousel-control-next-icon"></span>
   </a>
@@ -256,18 +278,16 @@
 
   <hr class="featurette-divider">
 
-   <!-- FEATURETTE 5 -->
-    <div class="row featurette">
+   <div class="row featurette">
       <div class="col-md-7 order-md-2">
         <h2 class="featurette-heading">Het ontwerpen van het omhulsel</h2>
-        <p class="lead">Het doel van deze opdracht is om het apparaat in een functionele en esthetische omhulsing te plaatsen. Dit moest ik zelf ontwerpen via het programma Solidworks. Hiermee moest goed worden nagedacht over waar alle componten komen te zitten en hoe groot die zijn. Ook moets ik goed nadenken over wat de functies van de specifieke onderdelen zijn. De lichtsensor moet namelijk wel buiten het bakje komen, anders vangt het immers geen licht op en zou het een beetje nutteloos zijn. Daarom moesten voor de onderdelen die buiten de doos moeten komen, gaten worden gemaakt. Ook voor de stroom toevoer, de vochtigheidssensor en de waterpomp moesten gaten worden gemaakt. Verder moest het printplaatje netjes worden gemonteerd in het doosje, dat heb ik gedaan door hem op vier pootjes te zetten en hem vast te schroeven. Ook de batterij voor de pomp zit netjes in een vakje. Het meeste heb ik zelf kunnen designen, maar voor de lastigere praktijken kon ik gelukkig terecht bij Herold Cremer. Hij verzorgde deze workshops en kon voor hulp altijd bij hem terrecht. Toen het bakje helemaal klaar was en goedgekeurd door Herold, kon ik heb gaan 3d printen in het Fabricatie Lab bij de HAN in Arnhem.</p>
+        <p class="lead">Het doel van deze opdracht is om het apparaat in een functionele en esthetische omhulsing te plaatsen. Dit moest ik zelf ontwerpen via het programma Solidworks. Hiermee moest goed worden nagedacht over waar alle componenten komen te zitten en hoe groot die zijn. Ook moest ik goed nadenken over wat de functies van de specifieke onderdelen zijn. De lichtsensor moet namelijk wel buiten het bakje komen, anders vangt het immers geen licht op en zou het een beetje nutteloos zijn. Daarom moesten voor de onderdelen die buiten de doos moeten komen, gaten worden gemaakt. Ook voor de stroomtoevoer, de vochtigheidssensor en de waterpomp moesten gaten worden gemaakt. Verder moest het printplaatje netjes worden gemonteerd in het doosje, dat heb ik gedaan door hem op vier pootjes te zetten en hem vast te schroeven. Ook de batterij voor de pomp zit netjes in een vakje. Het meeste heb ik zelf kunnen designen, maar voor de lastigere praktijken kon ik gelukkig terecht bij Herold Cremer. Hij verzorgde deze workshops en ik kon voor hulp altijd bij hem terecht. Toen het bakje helemaal klaar was en goedgekeurd door Herold, kon ik het gaan 3D-printen in het Fabricatie Lab bij de HAN in Arnhem.</p>
       </div>
       <div class="col-md-5 order-md-1">
         <img src="Images/Solidworks screenshot.png" alt="Tweede onderdeel" class="img-fluid mx-auto">
       </div>
     </div>
 
-<!-- EXTRA MEDIA ONDER FEATURETTE 5 -->
 <div class="row mt-4">
 
   <div class="col-md-6">
@@ -284,18 +304,17 @@
   <div class="col-md-6">
     <img
       src="Images/Solidworks screenshot.png"
-      alt="Ombulsel ontwerp detail 2"
+      alt="Omhulsel ontwerp detail 2"
       class="img-fluid rounded mb-3 media-equal">
   </div>
 </div> <hr class="featurette-divider">
 
- <!-- FEATURETTE 6 -->
-    <div class="row featurette">
+ <div class="row featurette">
       <div class="col-md-7">
         <h2 class="featurette-heading">Het monteren van de onderdelen
         </h2>
         <p class="lead">
-          Een van de laatste stappen is het monteren van alle onderdelen in het 3D-geprinte omhulsel. Dit was best een lastige klus, omdat alles precies op de juiste plek moest komen te zitten. Gelukkig had ik het ontwerp goed doordacht in Solidworks, waardoor alles redelijk soepel verliep. Ik begon met het plaatsen van het printplaatje, dat ik stevig vastzette met schroeven. Daarna monteerde ik de sensoren op de daarvoor bestemde plekken, zorgend dat ze goed uitgelijnd waren met de gaten in het omhulsel. Vervolgens installeerde ik de waterpomp en sloot ik alle bedrading aan volgens het schema dat ik had opgesteld tijdens het programmeren. Het was een nauwkeurig werkje, maar na een paar uur had ik alles netjes gemonteerd in de laatse les van het semester. Toen was alles klaar voor de laatste stap: het testen van het volledige systeem.
+          Een van de laatste stappen is het monteren van alle onderdelen in het 3D-geprinte omhulsel. Dit was best een lastige klus, omdat alles precies op de juiste plek moest komen te zitten. Gelukkig had ik het ontwerp goed doordacht in Solidworks, waardoor alles redelijk soepel verliep. Ik begon met het plaatsen van het printplaatje, dat ik stevig vastzette met schroeven. Daarna monteerde ik de sensoren op de daarvoor bestemde plekken, zorgend dat ze goed uitgelijnd waren met de gaten in het omhulsel. Vervolgens installeerde ik de waterpomp en sloot ik alle bedrading aan volgens het schema dat ik had opgesteld tijdens het programmeren. Het was een nauwkeurig werkje, maar na een paar uur had ik alles netjes gemonteerd in de laatste les van het semester. Toen was alles klaar voor de laatste stap: het testen van het volledige systeem.
       </div>
       <div class="col-md-5">
         <img src="Images/Foto solderen.jpeg" alt="Basiskennis" class="img-fluid mx-auto small-img" style="max-height: 600px;">
@@ -303,8 +322,6 @@
     </div>
     <hr class="featurette-divider">
     
-    <!-- FEATURETTE 7 -->
-
     <div class="row">
       <div class="col-12 text-center">
         <h2 class="featurette-heading">Het product testen</h2>
@@ -328,8 +345,6 @@
       </div>
     </div>
 
-<hr class="featurette-divider">
-
   </div> <footer class="container-fluid py-4 mt-5 border-top bg-light">
     <div class="px-5"> <p class="float-right"><a href="#">Back to top</a></p>
       <p>&copy; 2025–2026 Milo Bergsma</p>
@@ -338,11 +353,9 @@
 
 </main>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Parallax Script -->
 <script>
   window.addEventListener('scroll', function() {
     const scrolled = window.pageYOffset;
