@@ -36,15 +36,15 @@
       display: flex;
       align-items: center;
       padding: 3rem 0;
-      background-color: #333; /* Pas eventueel aan of voeg een achtergrondafbeelding toe */
-      /* Vervang de onderstaande regels */
-  background-image: url('/images/Foto\ laptop.jpg'); /* Pad naar je afbeelding */
-  background-size: cover;       /* Zorgt dat de foto het hele blok vult */
-  background-position: center;  /* Centreert de foto */
-  background-repeat: no-repeat; /* Voorkomt herhalen van de foto */
-  position: relative;
-}
-    
+      background-color: #333;
+      
+      /* Achtergrondafbeelding */
+      background-image: url('/images/Foto\ laptop.jpg'); 
+      background-size: cover;       /* Zorgt dat de foto het hele blok vult */
+      background-position: center;  /* Centreert de foto */
+      background-repeat: no-repeat; /* Voorkomt herhalen van de foto */
+      position: relative;
+    }
   </style>
 </head>
 
@@ -89,74 +89,116 @@
   <div class="row justify-content-center text-center">
     <div class="col-lg-8">
 
-      <h3 class="mb-4">Doel van het document</h3>
+      <h3 class="mb-4">Doel van het dashboard</h3>
 
-     <div class="row">
-      <div class="col-12 text-center mt-4">
-        <p class="lead">
-                    Voor elk® is een PowerBI dashboard ontwikkelt waarin overzichtelijk alle belangrijke afvalcijfers van elk® zijn weergegeven. Er is gebruikt gemaakt van PowerBI omdat elk® hier al reeds gebruik van maakt en ook medewerkers in dienst heeft die ervaring hebben met dit programma. Dit maakt het overdragen van de ontwikkelde applicatie aan elk® erg gemakkelijk. De cijfers die hieruit naar voor komen helpen elk® op verschillende manieren. Deze manieren zijn:
+      <div class="row">
+        <div class="col-12 text-center mt-4">
+          <p class="lead">
+            Voor elk® is een PowerBI dashboard ontwikkelt waarin overzichtelijk alle belangrijke afvalcijfers van elk® zijn weergegeven. Er is gebruikt gemaakt van PowerBI omdat elk® hier al reeds gebruik van maakt en ook medewerkers in dienst heeft die ervaring hebben met dit programma. Dit maakt het overdragen van de ontwikkelde applicatie aan elk® erg gemakkelijk. De cijfers die hieruit naar voor komen helpen elk® op verschillende manieren. Deze manieren zijn:
+          </p>
           <div class="row justify-content-center">
-  <div class="col-md-8">
-    <ul class="list-group list-group-flush text-center lead">
-      <li class="list-group-item bg-transparent border-0"><strong>1. Ik wil mij ontwikkelen op gebied van techniek (niet alleen de deelproducten van deze minor maar ook techniek die bij het vraagstuk van het bedrijf past) en samen met mijn groepsgenoten een product opstellen waar elk® iets mee kan.</strong></li>
-      <li class="list-group-item bg-transparent border-0"><strong>2. Ik wil tijdens dit project goed in kaart brengen wat de organisatie en de verschillende stakeholders in het deelproduct willen en dat meenemen in het product. Dit om zo de juiste afweging te kunnen maken over welke technologie het meest past bij de verandering binnen het bedrijf.</strong></li>
-      <li class="list-group-item bg-transparent border-0"><strong>3. Ik wil graag beter de stakeholders betrekken bij de ontwikkelingen die ik doe binnen het project en vaker om tussentijdse feedback vragen. Dit om gerichter te werken en de verwachtingen van het product continu bij te stellen.</strong></li>
-    </ul>
-  </div>
-</div>      
-        Het ontwikkelde dashboard bestaat uit 3 pagina’s. Hieronder is voor elke pagina een toelichting gegeven.  
-      </p>
+            <div class="col-md-8">
+              <ul class="list-group list-group-flush text-center lead">
+                <li class="list-group-item bg-transparent border-0"><strong>1. De cijfers omtrent uitstoot, scheiding, hergebruik etc. kunnen relevant zijn voor eventuele rapportages die elk® zal moeten doen. Denk hierbij bijvoorbeeld aan het csrd rapport.</strong></li>
+                <li class="list-group-item bg-transparent border-0"><strong>2. Het is voor elk® relevant om per leverancier inzichtelijk te hebben hoeveel en welke afvalstromen zij in omloop hebben. Met deze informatie kan elk® gerichte plannen maken om CO₂-uitstoot te verminderen.</strong></li>
+                <li class="list-group-item bg-transparent border-0"><strong>3. elk® wil in de toekomst de hoeveelheid afvalleveranciers waarmee ze werken enorm te verminderen. Dit dashboard geeft inzichtelijk waar en hoeveel afval wordt verwerkt per leverancier. Deze informatie kan die keuze ondersteunen.</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <img src="../images/Foto excel bestand.png"
-           class="img-fluid rounded shadow mx-auto d-block"
-           style="max-width: 900px;"
-           alt="Excel bestand">
+      <h3 class="mb-4 mt-5">Hoe werkt het dashboard</h3>
 
+      <div class="row">
+        <div class="col-12 text-center mt-4">
+          <p class="lead">
+            Het dashboard is ontwikkeld om automatisch de relevante data naar voren te brengen. Het is zo ontwikkeld dat wanneer de leverancier het ingevulde Excel format naar elk® mailt, hij automatisch aan het Power BI dashboard wordt gekoppeld. Dit is gedaan a.d.h.v. ...... Het dashboard zelf is in drie overzichtelijke pagina's verdeeld. Deze zullen hieronder worden toegelicht.
+          </p>
+        </div>
+      </div>
+      
     </div>
   </div>
 </div>
 
 <div class="container py-5">
   <div class="row align-items-center flex-lg-row-reverse">
-    <div class="col-lg-6">
-      <h3>Wat moet er in het document?</h3>
+    
+    <div class="col-lg-5">
+      <h3>Pagina 1: Compleet overzicht</h3>
       <p> 
-        Het doel van het document is om de data die elk® nodig heeft, efficiënt en automatisch te kunnen overzetten naar een Power BI dashboard. Maar om dat te doen moet er goed worden onderzocht welke data elk® terug wil zien in dit document. Om dit te kunnen concluderen is er met verschillende stakeholders gesproken en zijn de wensen meegenomen. Ook is er gekeken naar de data die al bestond, denk hierbij aan dashboards van leveranciers, documenten van elk® en literatuuronderzoek wat heeft plaatsgevonden voor dit onderzoek. De afbeelding links illustreert de eisen van twee van de stakeholders van het product. Op deze manier is er voor elke stakeholder genoteerd wat hij/zij terug wil zien in het product. Deze informatie hielp niet alleen met het ophalen van de specifieke data, maar ook bij de uiteindelijke keuze van de wijze waarop de data wordt verzameld.
+        Deze pagina vormt de basis van het dashboard en biedt een compleet overzicht van alle afvalstromen binnen elk®. De pagina is ontworpen om alle data overzichtelijk te maken in één weergave. 
+        <br><br>
+        Aan de linkerzijde heeft de gebruiker de mogelijkheid om de data te filteren. Er kan specifiek worden gefilterd op:
       </p>
+      <ul class="list-unstyled">
+        <li class="mb-2"><strong>1. Afvalverwerkers:</strong> Om data tussen leveranciers te vergelijken.</li>
+        <li class="mb-2"><strong>2. Afvalstroom:</strong> Om inzicht te krijgen in specifieke afvalstromen.</li>
+        <li class="mb-2"><strong>3. Jaartal & regio:</strong> Voor inzicht over de afvalstomen per regio voor een specifieke tijdsperiode.</li>
+      </ul>
     </div>
-    <div class="col-lg-6 text-center">
-      <img src="../images/Voorbeeld eisen.png" class="img-fluid rounded shadow" alt="Agenda">
+
+    <div class="col-lg-7 text-center">
+      <img src="/images/Dashboard foto 1.png" class="img-fluid rounded shadow" alt="Agenda">
     </div>
   </div>
 </div>
 
 <div class="container py-5">
-  <div class="row align-items-center">
-    <div class="col-lg-6">
-      <h3>De keuze</h3>
+  <div class="row align-items-center flex-lg-row-reverse">
+    
+    <div class="col-lg-5">
+      <h3>Pagina 2: Visuele samenvatting KPI's</h3>
       <p>
-        Zoals hierboven al werd genoemd, hebben wij goed na moeten denken over hoe wij ervoor konden zorgen dat de data op de meest effectieve manier kan worden overgebracht naar elk®. Uiteindelijk zijn wij gegaan voor een Microsoft Excel bestand. Wij hebben hiervoor gekozen omdat de opties die Excel biedt, vrijwel eindeloos zijn (in ieder geval voor onze bedoelingen ermee). Ook is dit gratis aangezien elk® een Microsoft 365 licentie heeft, evenals de meeste andere bedrijven. Ook zijn de meeste mensen gewend om met Excel te werken en is de leercurve zeer laag tot niet bestaand. Ook kan dit document vrij worden doorgestuurd naar externe partijen, zonder dat dit problemen met zich meebrengt. Zo konden wij bijvoorbeeld Microsoft Powerapps niet gebruiken omdat die documenten niet vrij konden worden gedeeld met mensen buiten de organisatie.
+        Deze pagina biedt een visuele samenvatting van de belangrijkste prestatie-indicatoren (KPI's).
+        De belangrijkste onderdelen van deze pagina zijn:
       </p>
+      <ul class="list-unstyled">
+        <li class="mb-3"><strong>• Afvalcompositie (Percentages):</strong> De bovenste twee kaarten tonen de verhouding tussen BSA-afval (Bouw- en Sloopafval) en overige afvalstromen. Dit helpt elk® bij het monitoren van de afvalscheidingsdoelstellingen.</li>
+        <li class="mb-3"><strong>• Totaal Tonnage & Kosten:</strong> De centrale kaarten geven het totale gewicht (Sum of Tonnage) en de totale investering (Sum of Kosten) weer. Direct daarnaast worden de Kosten per ton getoond, wat een essentiële graadmeter is voor de financiële efficiëntie van de gekozen afvalverwerkers.</li>
+        <li class="mb-3"><strong>• Milieu-impact (CO₂):</strong> Aan de onderzijde wordt de balans opgemaakt tussen de Uitgestoten CO₂ en de Vermeden CO₂. Deze cijfers zijn gebaseerd op de geverifieerde data van verschillende instellingen, waardoor elk® hun milieuvoetafdruk kan aangeven in rapportages.</li>
+        <li class="mb-3"><strong>• Interactieve Filters:</strong> Net als op de tabelpagina kan de gebruiker filteren op afvalverwerker, afvalstroom, jaartal en regio. De cijfers op de kaarten passen zich direct aan de selectie aan, waardoor prestaties per regio of andere filter direct zichtbaar wordt.</li>
+      </ul>
     </div>
-    <div class="col-lg-6 text-center">
-      <img src="../images/Elk dashboard.png" class="img-fluid rounded shadow" alt="Overzicht contactgegevens">
+
+    <div class="col-lg-7 text-center">
+      <img src="/images/Dashboard foto 2.png" class="img-fluid rounded shadow" alt="Overzicht contactgegevens">
     </div>
+
   </div>
 </div>
 
 <div class="container py-5">
-  <div class="row justify-content-center text-center">
+  <div class="row justify-content-center">
     <div class="col-lg-8">
-      <h3>Download het bestand</h3>
+      
+      <h3 class="text-center mb-4">Pagina 3: Vergelijkingen</h3>
+      
       <p>
-        Hier kunt u de tekst plaatsen die uitleg geeft over het bestand dat hieronder gedownload kan worden.
+        Deze pagina is het meest krachtige onderdeel van het dashboard voor beleidssturing. Het stelt de gebruiker in staat om een volledige benchmark uit te voeren. In plaats van slechts naar één datapunt te kijken, kunnen hier twee verschillende scenario's naast elkaar worden gezet om patronen, uitschieters en verbeterpunten te identificeren.
       </p>
-      <a href="pad/naar/bestand.xlsx" class="btn btn-success btn-lg mt-3" download>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-earmark-excel-fill me-2" viewBox="0 0 16 16">
-          <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM5.884 6.68 8 9.219l2.116-2.54a.5.5 0 1 1 .768.641L8.651 10l2.233 2.68a.5.5 0 0 1-.768.64L8 10.781l-2.116 2.54a.5.5 0 0 1-.768-.641L7.349 10 5.116 7.32a.5.5 0 1 1 .768-.64z"/>
-        </svg>
-        Download Excel Bestand
-      </a>
+      <p>De belangrijkste onderdelen van deze vergelijkingspagina zijn:</p>
+      
+      <ul class="list-unstyled">
+        <li class="mb-3">
+          <strong>• Multifunctionele Vergelijking (Side-by-Side):</strong> De pagina is opgedeeld in twee kolommen die onafhankelijk van elkaar gefilterd kunnen worden. Dit maakt het mogelijk om vergelijkingen te maken tussen:
+          <ul class="mt-2">
+            <li><em>Regio's:</em> Bijvoorbeeld de afvalprestaties van Midden-Oost versus Midden-West.</li>
+            <li><em>Jaren:</em> De voortgang van 2024 ten opzichte van 2025 om te zien of duurzaamheidsdoelstellingen worden gehaald.</li>
+            <li><em>Afvalverwerkers:</em> De efficiëntie en CO₂-uitstoot van Renewi direct vergelijken met die van Spelt.</li>
+            <li><em>Afvalstromen:</em> De impact van bijvoorbeeld C-hout versus regulier bouwafval binnen een specifieke regio.</li>
+          </ul>
+        </li>
+        <li class="mb-3"><strong>• KPI-Analyse per Scenario:</strong> Voor beide zijden worden direct de kerncijfers getoond: het totale tonnage, de totale kosten en de gemiddelde Kosten per ton. Dit maakt direct duidelijk waar de financiële verschillen vandaan komen.</li>
+        <li class="mb-3"><strong>• CO₂-Voetafdruk Vergelijking:</strong> Onderin wordt de milieubalans (Uitgestoten vs. Vermeden CO₂) getoond voor beide filters. Hierdoor kan elk® direct zien welk jaar, welke regio of welke verwerker de laagste netto-uitstoot realiseert.</li>
+        <li class="mb-3"><strong>• Efficiëntie-indicator (Kosten per ton CO₂):</strong> Deze kaart laat zien hoe effectief de investering in afvalverwerking is in verhouding tot de milieu-impact. Een lagere score betekent dat er minder wordt betaald per ton uitgestoten CO₂, wat kan duiden op een efficiënter proces of een betere afvalscheiding.</li>
+      </ul>
+
+      <div class="text-center mt-5">
+        <img src="/images/Dashboard foto 3.png" class="img-fluid rounded shadow" alt="Overzicht contactgegevens">
+      </div>
+
     </div>
   </div>
 </div>
