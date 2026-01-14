@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Generator</title>
+    <style>
+        /* --- STYLING (CSS) --- */
+        :root {
+            --bg-color: #1a1a1d;
+            --card-bg: #2d2d30;
+            --accent-color: #3498db; 
+            --accent-hover: #2980b9;
+            --text-color: #e0e0e0;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .converter-container {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 600px;
+            border-top: 4px solid var(--accent-color);
+            text-align: center;
+        }
+
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .subtitle { color: var(--accent-color); font-style: italic; opacity: 0.8; }
+
+        .output-area {
+            background-color: #1e1e1e;
+            border: 1px solid #444;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 8px;
+            padding: 20px;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .joke-setup {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .joke-punchline {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .action-area { margin-top: 1rem; }
+
+        button#joke-btn {
+            background-color: var(--accent-color);
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        button#joke-btn:hover { background-color: var(--accent-hover); transform: translateY(-2px); }
+        button#joke-btn:active { transform: translateY(0); }
+
+        footer { font-size: 0.8rem; color: #666; margin-top: 2rem; }
+
+        /* Loader */
+        #loading-spinner {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(52, 152, 219, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid var(--accent-color);
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="converter-container">
+        <header>
+            <h1>Random Joke Generator</h1>
+            <p class="subtitle">"Why so serious?"</p>
+        </header>
+
+        <div class="output-area">
+            <div id="joke-content">
+                <p class="joke-setup" id="setup">Druk op de knop voor een mop...</p>
+                <p class="joke-punchline" id="punchline"></p>
+            </div>
+
+            <div id="loading-spinner">
+                <div class="spinner"></div>
+            </div>
+        </div>
+
+        <div class="action-area">
+            <button id="joke-btn" type="button">Vertel een mop</button>
+        </div>
+
+        <footer>
+            &copy; 2026 Official Joke API
+        </footer>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Elementen ophalen
+            const jokeBtn = document.getElementById('joke-btn');
+            const jokeContent = document.getElementById('joke-content');
+            const setupText = document.getElementById('setup');
+            const punchlineText = document.getElementById('punchline');
+            const loader = document.getElementById('loading-spinner');
+
+            const apiUrl = 'https://official-joke-api.appspot.com/random_joke';
+
+            // 2. Click event toevoegen
+            jokeBtn.addEventListener('click', getJoke);
+
+            function getJoke() {
+                // UI Update: Tekst weg, loader tonen
+                jokeContent.style.display = 'none';
+                loader.style.display = 'flex';
+                
+                // Teksten leegmaken
+                setupText.innerText = "";
+                punchlineText.innerText = "";
+
+                // 3. De API Fetch aanroep
+                fetch(apiUrl)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Netwerk response was niet ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        // Loader verbergen, content tonen
+                        loader.style.display = 'none';
+                        jokeContent.style.display = 'block';
+
+                        // Data invullen
+                        setupText.innerText = data.setup;
+                        
+                        // Kleine vertraging voor de punchline
+                        setTimeout(() => {
+                            punchlineText.innerText = data.punchline;
+                        }, 500); 
+                    })
+                    .catch(error => {
+                        console.error('Fout bij ophalen mop:', error);
+                        loader.style.display = 'none';
+                        jokeContent.style.display = 'block';
+                        setupText.innerText = "Kon geen mop ophalen. Probeer het nog eens.";
+                        punchlineText.innerText = "(Check je internetverbinding)";
+                    });
+            }
+        });
+    </script>
+</body>
+</html>

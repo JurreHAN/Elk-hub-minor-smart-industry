@@ -34,7 +34,7 @@
     /* De basislijn (grijs) veranderen naar geel */
     .stepper::before {
       background-color: #f8d200 !important;
-      opacity: 0.5; /* Optioneel: iets lichter maken zodat de bollen eruit springen */
+      opacity: 0.5;
     }
 
     /* De voortgangslijn (blauw) veranderen naar geel */
@@ -104,6 +104,13 @@
       text-align: center;
     }
 
+    /* Helper voor media gelijke hoogte */
+    .media-equal {
+        height: 300px; 
+        object-fit: cover;
+        width: 100%;
+    }
+
   </style>
 </head>
 
@@ -147,6 +154,7 @@
         </h2>
         <p class="lead">
           Een onderdeel van deze minor is IoT, het internet of things. Dit is eigenlijk een netwerk van fysieke apparaten, voertuigen of andere objecten die zijn uitgerust met sensoren, software en met netwerkconnectiviteit. Hierdoor kunnen ze gegevens verzamelen, uitwisselen en communiceren via het internet. Hierover hebben wij ook verschillende lessen gehad en is een deel van deze minor op gebouwd. Namelijk: Het bouwen van een IoT-schakelaar die automatisch de lichtsensitiviteit en aarde-vochtigheid vastlegt en zo nodig aanpast. Om dit te kunnen realiseren, heb ik een aantal dingen moeten doen. Deze stappen zullen hieronder worden toegelicht.
+        </p>
       </div>
       <div class="col-md-5">
         <img src="Images/Foto solderen.jpeg" alt="Basiskennis" class="img-fluid mx-auto small-img" style="max-height: 600px;">
@@ -155,27 +163,29 @@
 
     <hr class="featurette-divider">
 
-<div class="stepper d-flex justify-content-between mt-4">
-  <div class="step">
-    <div class="step-circle">1</div>
-    <div class="step-label mt-2 text-center">Programmeren van het softwaresysteem</div>
-  </div>
-  <div class="step">
-    <div class="step-circle">2</div>
-    <div class="step-label mt-2 text-center">Het ontwerpen van het printplaatje</div>
-  </div>
-  <div class="step">
-    <div class="step-circle">3</div>
-    <div class="step-label mt-2 text-center">Het ontwerpen van het omhulsel</div>
-  </div>
-  <div class="step">
-    <div class="step-circle">4</div>
-    <div class="step-label mt-2 text-center">Het monteren van de onderdelen</div>
-  </div>
-  <div class="step">
-    <div class="step-circle">5</div>
-    <div class="step-label mt-2 text-center">Het product testen</div>
-  </div>
+<div class="stepper d-flex justify-content-between mt-4 position-relative">
+    <div class="position-absolute w-100" style="top: 20px; height: 2px; background-color: #e9ecef; z-index: 0;"></div>
+    
+    <div class="step text-center position-relative" style="z-index: 1; background-color: #fff; padding: 0 10px;">
+      <div class="step-circle">1</div>
+      <div class="step-label mt-2">Programmeren van het softwaresysteem</div>
+    </div>
+    <div class="step text-center position-relative" style="z-index: 1; background-color: #fff; padding: 0 10px;">
+      <div class="step-circle">2</div>
+      <div class="step-label mt-2">Het ontwerpen van het printplaatje</div>
+    </div>
+    <div class="step text-center position-relative" style="z-index: 1; background-color: #fff; padding: 0 10px;">
+      <div class="step-circle">3</div>
+      <div class="step-label mt-2">Het ontwerpen van het omhulsel</div>
+    </div>
+    <div class="step text-center position-relative" style="z-index: 1; background-color: #fff; padding: 0 10px;">
+      <div class="step-circle">4</div>
+      <div class="step-label mt-2">Het monteren van de onderdelen</div>
+    </div>
+    <div class="step text-center position-relative" style="z-index: 1; background-color: #fff; padding: 0 10px;">
+      <div class="step-circle">5</div>
+      <div class="step-label mt-2">Het product testen</div>
+    </div>
 </div>
 
     <hr class="featurette-divider">
@@ -184,6 +194,7 @@
       <div class="col-md-7 order-md-2">
         <h2 class="featurette-heading">Het programmeren van het softwaresysteem</h2>
         <p class="lead">Dit semester kregen wij, vooral voor de studenten die nog niet zoveel ervaring hadden met programmeren, les van Mathijs van der Vegt. Hij is een expert als het gaat om programmeren, in ieder geval in mijn ogen. A.d.h.v. verschillende lessen, online tutorials en de onderdelen, heb ik stap voor stap het programma geschreven. Langzamerhand begon het programma steeds meer vorm te krijgen. Het leuke hieraan was, dat ik het steeds kon testen met de diverse onderdelen die ik ter beschikking had. Zo kon ik bijvoorbeeld een lampje aan en uit zetten, data doorsturen naar mijn laptop of een OLED schermpje aanzetten en data daarop weergeven. Dit programmeren is overkoepelend met het onderdeel 'Smart Connection'.
+        </p>
       </div>
       <div class="col-md-5 order-md-1">
         <img src="Images/Voorbeeld programmeren.png" alt="Tweede onderdeel" class="img-fluid mx-auto">
@@ -211,20 +222,23 @@
       <div class="col-md-7">
         <h2 class="featurette-heading">Het ontwerpen van het printplaatje 
         </h2>
-        <p class="lead">Zoals eerder al benoemd was, is het apparaat een beetje een wirwar van draadjes en componenten. Dit kunnen we verbeteren. Tijdens één van de workshops kregen wij uitleg van Mathijs van der Vegt over het programma Eagle. In dit programma kon ik een printplaatje designen die een hele hoop draadjes netjes wegwerkt en de componenten een mooie plek geeft. Ik ben veel bezig geweest met het zo efficiënt mogelijk maken van de verbindingen en alles een goede plek te geven op het plaatje. Toen ik tevreden was met het design, heeft Mathijs het laten ontwikkelen in China. In de afbeelding rechts is te zien hoe de schets van het printplaatje eruitzag. Als je op de pijltjes klikt, kun je zien hoe het plaatje van schets, naar werkelijkheid gaat. Wederom ziet het er nog een beetje druk uit. Daarom is de volgende stap het ontwerpen van een mooi bakje waarin alle componenten hun plek krijgen.</p>
+        <p class="lead">Zoals eerder al benoemd was, is het apparaat een beetje een wirwar van draadjes en componenten. Dit kunnen we verbeteren. Tijdens één van de workshops kregen wij uitleg van Mathijs van der Vegt over het programma Eagle. In dit programma kon ik een printplaatje designen die een hele hoop draadjes netjes wegwerkt en de componenten een mooie plek geeft. Ik ben veel bezig geweest met het zo efficiënt mogelijk maken van de verbindingen en alles een goede plek te geven op het plaatje. Toen ik tevreden met het design was, heeft Mathijs het laten ontwikkelen in China. In de afbeelding rechts is te zien hoe de schets van het printplaatje eruitzag. Als je op de pijltjes klikt, kun je zien hoe het plaatje van schets, naar werkelijkheid gaat. Wederom ziet het er nog een beetje druk uit. Daarom is de volgende stap het ontwerpen van een mooi bakje waarin alle componenten hun plek krijgen.</p>
       </div>
       <div class="col-md-5">
+        
         <div id="pcbCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
           <ol class="carousel-indicators">
-  <li data-target="#pcbCarousel" data-slide-to="0" class="active"></li>
-  <li data-target="#pcbCarousel" data-slide-to="1"></li>
-  <li data-target="#pcbCarousel" data-slide-to="2"></li>
-  <li data-target="#pcbCarousel" data-slide-to="3"></li>
-  <li data-target="#pcbCarousel" data-slide-to="4"></li>
-  <li data-target="#pcbCarousel" data-slide-to="5"></li>
-  <li data-target="#pcbCarousel" data-slide-to="6"></li>
-  <li data-target="#pcbCarousel" data-slide-to="7"></li>
-</ol>
+            <li data-target="#pcbCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#pcbCarousel" data-slide-to="1"></li>
+            <li data-target="#pcbCarousel" data-slide-to="2"></li>
+            <li data-target="#pcbCarousel" data-slide-to="3"></li>
+            <li data-target="#pcbCarousel" data-slide-to="4"></li>
+            <li data-target="#pcbCarousel" data-slide-to="5"></li>
+            <li data-target="#pcbCarousel" data-slide-to="6"></li>
+            <li data-target="#pcbCarousel" data-slide-to="7"></li>
+            <li data-target="#pcbCarousel" data-slide-to="8"></li>
+            <li data-target="#pcbCarousel" data-slide-to="9"></li>
+          </ol>
 
 
   <div class="carousel-inner">
@@ -261,6 +275,14 @@
       <img src="Images/Printplaat 7.jpeg" class="d-block w-100" alt="Printplaat eindresultaat" style="max-height: 450px; object-fit: contain;">
     </div>
 
+    <div class="carousel-item">
+      <img src="Images/Doosje open PCB.jpeg" class="d-block w-100" alt="Printplaat extra 1" style="max-height: 450px; object-fit: contain;">
+    </div>
+
+    <div class="carousel-item">
+      <img src="Images/Bakje dicht.jpg" class="d-block w-100" alt="Printplaat extra 2" style="max-height: 450px; object-fit: contain;">
+    </div>
+
   </div>
 
   <a class="carousel-control-prev" href="#pcbCarousel" role="button" data-slide="prev">
@@ -272,8 +294,7 @@
   </a>
 
 </div>
-
-      </div>
+</div>
     </div>
 
   <hr class="featurette-divider">
@@ -303,49 +324,65 @@
 
   <div class="col-md-6">
     <img
-      src="Images/Solidworks screenshot.png"
+      src="Images/Foto doosje uitgeprint.jpeg"
       alt="Omhulsel ontwerp detail 2"
       class="img-fluid rounded mb-3 media-equal">
   </div>
 </div> <hr class="featurette-divider">
 
- <div class="row featurette">
-      <div class="col-md-7">
+<div class="row featurette">
+      <div class="col-12">
         <h2 class="featurette-heading">Het monteren van de onderdelen
         </h2>
         <p class="lead">
-          Een van de laatste stappen is het monteren van alle onderdelen in het 3D-geprinte omhulsel. Dit was best een lastige klus, omdat alles precies op de juiste plek moest komen te zitten. Gelukkig had ik het ontwerp goed doordacht in Solidworks, waardoor alles redelijk soepel verliep. Ik begon met het plaatsen van het printplaatje, dat ik stevig vastzette met schroeven. Daarna monteerde ik de sensoren op de daarvoor bestemde plekken, zorgend dat ze goed uitgelijnd waren met de gaten in het omhulsel. Vervolgens installeerde ik de waterpomp en sloot ik alle bedrading aan volgens het schema dat ik had opgesteld tijdens het programmeren. Het was een nauwkeurig werkje, maar na een paar uur had ik alles netjes gemonteerd in de laatste les van het semester. Toen was alles klaar voor de laatste stap: het testen van het volledige systeem.
+          Een van de laatste stappen is het monteren van alle onderdelen in het 3D-geprinte omhulsel. Dit was best een lastige klus, omdat alles precies op de juiste plek moest komen te zitten. Gelukkig had ik het ontwerp redelijk goed doordacht in Solidworks, maar toch moest ik het één en ander aanpassen. Het begon met het plaatsen van het printplaatje, alleen heb ik de pootjes waarop het plaatje op moest rusten net iets te ver uit elkaar geplaatst. Hierdoor moest ik even creatief zijn en heb ik het plaatje uiteindelijk geklemd onder wat schroefjes. Daarna monteerde ik de sensoren op de daarvoor bestemde plekken, zorgend dat ze goed uitgelijnd waren met de gaten in het omhulsel. Vervolgens installeerde ik de waterpomp en sloot ik alle bedrading aan volgens het schema dat ik had opgesteld tijdens het programmeren. Het was een nauwkeurig werkje, maar na een paar uur had ik alles netjes gemonteerd. Toen was alles klaar voor de laatste stap: het testen van het volledige systeem. Alleen verliep dat niet helemaal soepel.
+        </p>
       </div>
-      <div class="col-md-5">
-        <img src="Images/Foto solderen.jpeg" alt="Basiskennis" class="img-fluid mx-auto small-img" style="max-height: 600px;">
+      
+      <div class="col-md-6 mt-4">
+        <img src="Images/Doosje open schroefjes.jpeg" alt="Monteren foto 1" class="img-fluid rounded shadow" style="width: 100%; height: auto; object-fit: cover;">
+      </div>
+      <div class="col-md-6 mt-4">
+        <img src="Images/Doosje open PCB.jpeg" alt="Monteren foto 2" class="img-fluid rounded shadow" style="width: 100%; height: auto; object-fit: cover;">
       </div>
     </div>
-    <hr class="featurette-divider">
+<hr class="featurette-divider">
     
     <div class="row">
       <div class="col-12 text-center">
         <h2 class="featurette-heading">Het product testen</h2>
         <p class="lead">
-          Nadat alles gemonteerd was, was het tijd voor de laatste stap: het testen van het systeem. 
+          Nadat alles gemonteerd was, was het tijd voor de laatste stap: het testen van het systeem. Alleen verliep dit dus niet zo soepel als gehoopt. Ik wilde gelijk toen ik alles had gemonteerd, de code testen om te kijken of het nog steeds werkte. Echter was ik erg teleurgesteld. Bijna alle sensoren haalden geen data meer op en de pomp deed niets meer. Ik was teneergeslagen. Ik ben maar naar huis gegaan, met een geheven hoofd. Maar, dit zou mij niet tegenhouden. Ik heb die avond uren lopen priegelen om te kijken of ik erachter kon komen wat er mis was. Alle draadjes vervangen waar dat kon, alles vast of los geschroefd, andere code gebruikt en zelfs heb ik Mathijs van der Vegt een berichtje gestuurd. Ik was namelijk bang dat mijn sensoren misschien kapot waren gegaan, maar ik had op het bakje van een klasgenoot getest of mijn sensoren daarop werkten en daar haalde hij wel data op. Het lag dus ergens anders aan. Ik had samen met Mathijs gekeken naar het design van het printplaatje in Eagle, hier vonden wij iets interessants. Er was namelijk één lijntje niet verbonden in het printplaatje, hierdoor hadden verschillende sensoren geen power en konden die dus ook niets doorsturen. Na overleg met Mariëlle en Mathijs ben ik tot de conclusie gekomen om de onderdelen terug te monteren op het breadboard. Dit was de enige manier om toch een werkend product te hebben, het opnieuw maken van een printplaatje duurde helaas weken en daar had ik geen tijd voor. Na uren mijn stappen teruglopen en veel hulp van Gijs van Hoof, was het me gelukt alles weer succesvol te monteren op het breadboard. Nu de grote test, werkte het dan ook. Ik had de code geüpload naar de ESP32 en met grote verbazing werkten alle onderdelen. Ik was dolblij. Zo is het na veel tijd en moeite toch gelukt de plantenbak succesvol te laten werken.
           In de onderstaande video is te zien hoe de sensoren reageren op de omgeving en hoe de waterpomp 
-          wordt geactiveerd wanneer de bodemvochtigheid te laag is. Dit bevestigt dat de volledige 
-          keten van code, elektronica en ontwerp correct functioneert.
+          wordt geactiveerd. Dit bevestigt dat de volledige keten van code, elektronica en ontwerp correct functioneert. Ook heb ik er een leuke blooper bij gezet. 
         </p>
       </div>
     </div>
 
-    <div class="row mt-4 justify-content-center">
-      <div class="col-md-10 col-lg-8">
+    <div class="row mt-4">
+      <div class="col-md-6 text-center">
         <video 
-          src="Images/Video_Eindresultaat.mp4" 
+          src="Images/Video plant goed.mp4" 
           class="img-fluid rounded shadow w-100" 
           controls>
           Je browser ondersteunt geen video-tags.
         </video>
+        <p class="mt-2 font-weight-bold">Video plantenbak</p>
+      </div>
+
+      <div class="col-md-6 text-center">
+        <video 
+          src="Images/Video plant blooper.mp4" 
+          class="img-fluid rounded shadow w-100" 
+          controls>
+          Je browser ondersteunt geen video-tags.
+        </video>
+        <p class="mt-2 font-weight-bold">Video blooper</p>
       </div>
     </div>
-
-  </div> <footer class="container-fluid py-4 mt-5 border-top bg-light">
+    </div> 
+    
+  <footer class="container-fluid py-4 mt-5 border-top bg-light">
     <div class="px-5"> <p class="float-right"><a href="#">Back to top</a></p>
       <p>&copy; 2025–2026 Milo Bergsma</p>
     </div>
@@ -365,4 +402,4 @@
 </script>
 
 </body>
-</html>   
+</html>
