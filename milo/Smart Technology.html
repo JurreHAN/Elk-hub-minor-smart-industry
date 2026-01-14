@@ -9,37 +9,10 @@
   <link rel="stylesheet" href="Index.css">
 
   <style>
-    /* Ruimte voor fixed navbar - AANGEPAST naar 0 om witte balk te verwijderen */
+    /* Ruimte voor fixed navbar */
     body {
       padding-top: 0;
       margin: 0;
-    }
-
-    /* 1. Gele bollen met zwarte tekst */
-    .step-circle {
-      width: 40px;
-      height: 40px;
-      margin: 0 auto;
-      border-radius: 50%;
-      background-color: #f8d200 !important; /* Jouw gele kleur */
-      color: #000 !important;              /* Zwarte tekst */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      z-index: 1;
-      position: relative;
-    }
-
-    /* De basislijn (grijs) veranderen naar geel */
-    .stepper::before {
-      background-color: #f8d200 !important;
-      opacity: 0.5;
-    }
-
-    /* De voortgangslijn (blauw) veranderen naar geel */
-    .step:not(:last-child)::after {
-      background-color: #f8d200 !important;
     }
 
     /* 2. Fix voor de witte balk bovenin */
@@ -47,11 +20,66 @@
       margin-top: 0 !important;
     }
 
+    /* --- NIEUWE STEPPER STIJLEN (FIX VOOR LIJN) --- */
+    
+    /* Forceer dat de oude blauwe lijnen uit Index.css NIET getoond worden */
+    .step::after, .step::before, .stepper::before, .stepper::after {
+        content: none !important;
+        display: none !important;
+    }
+
+    /* De container van de bollen */
+    .stepper {
+        position: relative;
+        justify-content: space-between;
+    }
+
+    /* De doorlopende gele lijn op de achtergrond */
+    .stepper-line {
+        position: absolute;
+        top: 20px; /* Precies in het midden van de 40px bol */
+        left: 0;
+        width: 100%;
+        height: 4px; /* Iets dikker voor zichtbaarheid */
+        background-color: #f8d200;
+        z-index: 0; /* Achter de bollen */
+        transform: translateY(-50%); /* Vertical centering */
+    }
+
+    /* De individuele stap container */
+    .step {
+        z-index: 1; /* Bovenop de lijn */
+        position: relative;
+        background-color: transparent !important; /* BELANGRIJK: Transparant zodat de lijn zichtbaar blijft */
+        flex: 1; /* Ruimte verdelen */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5px;
+    }
+
+    /* De gele bollen */
+    .step-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #f8d200 !important; /* Jouw gele kleur */
+      color: #000 !important;              /* Zwarte tekst */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      z-index: 2;
+      position: relative;
+      border: 4px solid #fff; /* Wit randje zodat de lijn 'los' lijkt van de bol (optioneel) */
+      box-shadow: 0 0 0 1px #f8d200; /* Optioneel: dun geel randje om het wit */
+    }
+
     /* Parallax header */
     .scroll-header {
       position: relative;
       width: 100%;
-      height: 80vh; /* hoogte van header */
+      height: 80vh; 
       overflow: hidden;
     }
 
@@ -59,7 +87,7 @@
     .featurette-divider {
       margin: 5rem 0; 
       border: 0;
-      border-top: 2px solid #2b2e31; /* 3px dik en donkergrijs/zwart */
+      border-top: 2px solid #2b2e31; 
       opacity: 2;
     }
 
@@ -93,7 +121,7 @@
       transform: translateX(-50%);
       text-align: center;
       color: white;
-      z-index: 2; /* boven overlay */
+      z-index: 2; 
       text-shadow: 0 2px 6px rgba(0,0,0,0.6);
       padding: 0 15px;
     }
@@ -153,7 +181,7 @@
           <span class="text-muted">In de minor moesten we, om onze ontwikkeling aan te tonen, een bakje ontwerpen waarin de onderdelen voor de automatische plantenbak passen.</span>
         </h2>
         <p class="lead">
-          Een onderdeel van deze minor is IoT, het internet of things. Dit is eigenlijk een netwerk van fysieke apparaten, voertuigen of andere objecten die zijn uitgerust met sensoren, software en met netwerkconnectiviteit. Hierdoor kunnen ze gegevens verzamelen, uitwisselen en communiceren via het internet. Hierover hebben wij ook verschillende lessen gehad en is een deel van deze minor op gebouwd. Namelijk: Het bouwen van een IoT-schakelaar die automatisch de lichtsensitiviteit en aarde-vochtigheid vastlegt en zo nodig aanpast. Om dit te kunnen realiseren, heb ik een aantal dingen moeten doen. Deze stappen zullen hieronder worden toegelicht.
+          Een onderdeel van deze minor is IoT, het Internet of Things. Dit is eigenlijk een netwerk van fysieke apparaten, voertuigen of andere objecten die zijn uitgerust met sensoren, software en netwerkconnectiviteit. Hierdoor kunnen ze gegevens verzamelen, uitwisselen en communiceren via het internet. Hierover hebben wij ook verschillende lessen gehad en is een deel van deze minor op gebouwd. Namelijk: Het bouwen van een IoT-schakelaar die automatisch de lichtsensitiviteit en aarde-vochtigheid vastlegt en zo nodig aanpast. Om dit te kunnen realiseren, heb ik een aantal dingen moeten doen. Deze stappen zullen hieronder worden toegelicht.
         </p>
       </div>
       <div class="col-md-5">
@@ -163,31 +191,36 @@
 
     <hr class="featurette-divider">
 
-<div class="stepper d-flex justify-content-between mt-4 position-relative">
-    <div class="position-absolute w-100" style="top: 20px; height: 2px; background-color: #e9ecef; z-index: 0;"></div>
-    
-    <div class="step text-center position-relative" style="z-index: 1; background-color: #fff; padding: 0 10px;">
-      <div class="step-circle">1</div>
-      <div class="step-label mt-2">Programmeren van het softwaresysteem</div>
-    </div>
-    <div class="step text-center position-relative" style="z-index: 1; background-color: #fff; padding: 0 10px;">
-      <div class="step-circle">2</div>
-      <div class="step-label mt-2">Het ontwerpen van het printplaatje</div>
-    </div>
-    <div class="step text-center position-relative" style="z-index: 1; background-color: #fff; padding: 0 10px;">
-      <div class="step-circle">3</div>
-      <div class="step-label mt-2">Het ontwerpen van het omhulsel</div>
-    </div>
-    <div class="step text-center position-relative" style="z-index: 1; background-color: #fff; padding: 0 10px;">
-      <div class="step-circle">4</div>
-      <div class="step-label mt-2">Het monteren van de onderdelen</div>
-    </div>
-    <div class="step text-center position-relative" style="z-index: 1; background-color: #fff; padding: 0 10px;">
-      <div class="step-circle">5</div>
-      <div class="step-label mt-2">Het product testen</div>
-    </div>
-</div>
+    <div class="stepper d-flex justify-content-between mt-4">
+        
+        <div class="stepper-line"></div>
+        
+        <div class="step">
+          <div class="step-circle">1</div>
+          <div class="step-label mt-2 text-center">Programmeren van het softwaresysteem</div>
+        </div>
 
+        <div class="step">
+          <div class="step-circle">2</div>
+          <div class="step-label mt-2 text-center">Het ontwerpen van het printplaatje</div>
+        </div>
+
+        <div class="step">
+          <div class="step-circle">3</div>
+          <div class="step-label mt-2 text-center">Het ontwerpen van het omhulsel</div>
+        </div>
+
+        <div class="step">
+          <div class="step-circle">4</div>
+          <div class="step-label mt-2 text-center">Het monteren van de onderdelen</div>
+        </div>
+
+        <div class="step">
+          <div class="step-circle">5</div>
+          <div class="step-label mt-2 text-center">Het product testen</div>
+        </div>
+
+    </div>
     <hr class="featurette-divider">
 
     <div class="row featurette">
@@ -204,7 +237,7 @@
 <div class="row mt-5">
   <div class="col-md-7 order-md-2">
     <p class="lead">
-       Ook leerde ik hoe technische componenten aan elkaar moesten worden verbonden en dat je goed rekening moet houden met de in- en output. Zo moet alles via de juiste aansluitingen aan elkaar verbonden zijn en moet je rekening houden met de type componenten waarmee je werkt. Verschillende componenten moesten aan elkaar verbonden worden. Zo heb je de ESP32, dat is een klein computertje die de componenten via mijn geschreven code kan aansturen. Verder zit er een waterpomp in, een lichtsensor, vochtigheidssensor, een RF transmitter en een relay en nog andere kleine componenten die ervoor zorgen dat bijvoorbeeld de juiste hoeveelheid stroom wordt doorgestuurd. Deze onderdelen zorgen ervoor dat de benodigde informatie wordt verzameld en er gewenste acties kunnen plaatsvinden. Uiteindelijk had ik een werkende code die alle onderdelen aanstuurde en de relevante data ophaalde en naar een online dashboard stuurt. Maar zoals op de foto te zien is, is het nog een wirwar van draadjes en componenten. Niet erg functioneel nog.
+       Ook leerde ik hoe technische componenten aan elkaar moesten worden verbonden en dat je goed rekening moet houden met de in- en output. Zo moet alles via de juiste aansluitingen aan elkaar verbonden zijn en moet je rekening houden met de type componenten waarmee je werkt. Verschillende componenten moesten aan elkaar verbonden worden. Zo heb je de ESP32, dat is een klein computertje dat de componenten via mijn geschreven code kan aansturen. Verder zit er een waterpomp in, een lichtsensor, vochtigheidssensor, een RF transmitter en een relay en nog andere kleine componenten die ervoor zorgen dat bijvoorbeeld de juiste hoeveelheid stroom wordt doorgestuurd. Deze onderdelen zorgen ervoor dat de benodigde informatie wordt verzameld en er gewenste acties kunnen plaatsvinden. Uiteindelijk had ik een werkende code die alle onderdelen aanstuurde en de relevante data ophaalde en naar een online dashboard stuurde. Maar zoals op de foto te zien is, is het nog een wirwar van draadjes en componenten. Niet erg functioneel nog.
     </p>
   </div>
 
@@ -222,7 +255,7 @@
       <div class="col-md-7">
         <h2 class="featurette-heading">Het ontwerpen van het printplaatje 
         </h2>
-        <p class="lead">Zoals eerder al benoemd was, is het apparaat een beetje een wirwar van draadjes en componenten. Dit kunnen we verbeteren. Tijdens één van de workshops kregen wij uitleg van Mathijs van der Vegt over het programma Eagle. In dit programma kon ik een printplaatje designen die een hele hoop draadjes netjes wegwerkt en de componenten een mooie plek geeft. Ik ben veel bezig geweest met het zo efficiënt mogelijk maken van de verbindingen en alles een goede plek te geven op het plaatje. Toen ik tevreden met het design was, heeft Mathijs het laten ontwikkelen in China. In de afbeelding rechts is te zien hoe de schets van het printplaatje eruitzag. Als je op de pijltjes klikt, kun je zien hoe het plaatje van schets, naar werkelijkheid gaat. Wederom ziet het er nog een beetje druk uit. Daarom is de volgende stap het ontwerpen van een mooi bakje waarin alle componenten hun plek krijgen.</p>
+        <p class="lead">Zoals eerder al benoemd was, is het apparaat een beetje een wirwar van draadjes en componenten. Dit kunnen we verbeteren. Tijdens één van de workshops kregen wij uitleg van Mathijs van der Vegt over het programma Eagle. In dit programma kon ik een printplaatje designen dat een hele hoop draadjes netjes wegwerkt en de componenten een mooie plek geeft. Ik ben veel bezig geweest met het zo efficiënt mogelijk maken van de verbindingen en alles een goede plek te geven op het plaatje. Toen ik tevreden met het design was, heeft Mathijs het laten ontwikkelen in China. In de afbeelding rechts is te zien hoe de schets van het printplaatje eruitzag. Als je op de pijltjes klikt, kun je zien hoe het plaatje van schets naar werkelijkheid gaat. Wederom ziet het er nog een beetje druk uit. Daarom is de volgende stap het ontwerpen van een mooi bakje waarin alle componenten hun plek krijgen.</p>
       </div>
       <div class="col-md-5">
         
@@ -352,7 +385,7 @@
       <div class="col-12 text-center">
         <h2 class="featurette-heading">Het product testen</h2>
         <p class="lead">
-          Nadat alles gemonteerd was, was het tijd voor de laatste stap: het testen van het systeem. Alleen verliep dit dus niet zo soepel als gehoopt. Ik wilde gelijk toen ik alles had gemonteerd, de code testen om te kijken of het nog steeds werkte. Echter was ik erg teleurgesteld. Bijna alle sensoren haalden geen data meer op en de pomp deed niets meer. Ik was teneergeslagen. Ik ben maar naar huis gegaan, met een geheven hoofd. Maar, dit zou mij niet tegenhouden. Ik heb die avond uren lopen priegelen om te kijken of ik erachter kon komen wat er mis was. Alle draadjes vervangen waar dat kon, alles vast of los geschroefd, andere code gebruikt en zelfs heb ik Mathijs van der Vegt een berichtje gestuurd. Ik was namelijk bang dat mijn sensoren misschien kapot waren gegaan, maar ik had op het bakje van een klasgenoot getest of mijn sensoren daarop werkten en daar haalde hij wel data op. Het lag dus ergens anders aan. Ik had samen met Mathijs gekeken naar het design van het printplaatje in Eagle, hier vonden wij iets interessants. Er was namelijk één lijntje niet verbonden in het printplaatje, hierdoor hadden verschillende sensoren geen power en konden die dus ook niets doorsturen. Na overleg met Mariëlle en Mathijs ben ik tot de conclusie gekomen om de onderdelen terug te monteren op het breadboard. Dit was de enige manier om toch een werkend product te hebben, het opnieuw maken van een printplaatje duurde helaas weken en daar had ik geen tijd voor. Na uren mijn stappen teruglopen en veel hulp van Gijs van Hoof, was het me gelukt alles weer succesvol te monteren op het breadboard. Nu de grote test, werkte het dan ook. Ik had de code geüpload naar de ESP32 en met grote verbazing werkten alle onderdelen. Ik was dolblij. Zo is het na veel tijd en moeite toch gelukt de plantenbak succesvol te laten werken.
+          Nadat alles gemonteerd was, was het tijd voor de laatste stap: het testen van het systeem. Alleen verliep dit dus niet zo soepel als gehoopt. Ik wilde gelijk toen ik alles had gemonteerd, de code testen om te kijken of het nog steeds werkte. Echter was ik erg teleurgesteld. Bijna alle sensoren haalden geen data meer op en de pomp deed niets meer. Ik was teneergeslagen. Ik ben maar naar huis gegaan, met een geheven hoofd. Maar, dit zou mij niet tegenhouden. Ik heb die avond uren lopen priegelen om te kijken of ik erachter kon komen wat er mis was. Alle draadjes vervangen waar dat kon, alles vast of los geschroefd, andere code gebruikt en zelfs heb ik Mathijs van der Vegt een berichtje gestuurd. Ik was namelijk bang dat mijn sensoren misschien kapot waren gegaan, maar ik had op het bakje van een klasgenoot getest of mijn sensoren daarop werkten en daar haalde hij wel data op. Het lag dus ergens anders aan. Ik had samen met Mathijs gekeken naar het design van het printplaatje in Eagle, hier vonden wij iets interessants. Er was namelijk één lijntje niet verbonden in het printplaatje, hierdoor hadden verschillende sensoren geen power en konden die dus ook niets doorsturen. Na overleg met Mariëlle en Mathijs ben ik tot de conclusie gekomen om de onderdelen terug te monteren op het breadboard. Dit was de enige manier om toch een werkend product te hebben, het opnieuw maken van een printplaatje duurde helaas weken en daar had ik geen tijd voor. Na uren mijn stappen teruglopen en veel hulp van Gijs van Hoof, was het me gelukt alles weer succesvol te monteren op het breadboard. Nu de grote test, werkte het dan ook? Ik had de code geüpload naar de ESP32 en met grote verbazing werkten alle onderdelen. Ik was dolblij. Zo is het na veel tijd en moeite toch gelukt de plantenbak succesvol te laten werken.
           In de onderstaande video is te zien hoe de sensoren reageren op de omgeving en hoe de waterpomp 
           wordt geactiveerd. Dit bevestigt dat de volledige keten van code, elektronica en ontwerp correct functioneert. Ook heb ik er een leuke blooper bij gezet. 
         </p>
@@ -367,7 +400,7 @@
           controls>
           Je browser ondersteunt geen video-tags.
         </video>
-        <p class="mt-2 font-weight-bold">Video plantenbak</p>
+        <p class="mt-2 font-weight-bold">Video plantenbak a.d.h.v. de lichtsensor</p>
       </div>
 
       <div class="col-md-6 text-center">
@@ -378,6 +411,18 @@
           Je browser ondersteunt geen video-tags.
         </video>
         <p class="mt-2 font-weight-bold">Video blooper</p>
+      </div>
+    </div>
+
+    <div class="row mt-4 justify-content-center">
+      <div class="col-md-6 text-center">
+        <video 
+          src="/milo/Images/Video goed.mp4" 
+          class="img-fluid rounded shadow w-100" 
+          controls>
+          Je browser ondersteunt geen video-tags.
+        </video>
+        <p class="mt-2 font-weight-bold">Plantenbak a.d.h.v. de moisture sensor</p>
       </div>
     </div>
     </div> 
