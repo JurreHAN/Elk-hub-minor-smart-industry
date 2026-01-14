@@ -23,11 +23,20 @@
       border: none;
       font-weight: bold;
       transition: background-color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px; /* Ruimte tussen logo en tekst */
     }
 
     .btn-ontdek:hover {
       background-color: #e0b800;
       color: rgb(7, 7, 7);
+    }
+
+    /* Styling voor het Power BI logo in de knop */
+    .powerbi-icon {
+      height: 24px;
+      width: 24px;
     }
 
     /* Hero header minimale hoogte */
@@ -79,9 +88,16 @@
     <h1 class="display-4 fw-bold">Het Power BI dashboard</h1>
     <p class="lead mt-3">Op deze pagina zal worden uitgelegd hoe het Power BI dashboard in elkaar zit en waarvoor elk® het wil gebruiken.</p>
     <p class="lead mt-3">Wil je graag het dashboard zelf bekijken? Download hier!</p>
+    
     <a href="Power BI dashboard.pbix" class="btn btn-lg mt-3 btn-ontdek" download>
-      Ontdek meer
+      <svg class="powerbi-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <path fill="#e6ad10" d="M12 20h8v12h-8z"/>
+        <path fill="#f2c811" d="M2 12h8v20H2z"/>
+        <path fill="#f2c811" d="M22 2h8v30h-8z"/>
+      </svg>
+      Download
     </a>
+
   </div>
 </header>
 
@@ -94,14 +110,14 @@
       <div class="row">
         <div class="col-12 text-center mt-4">
           <p class="lead">
-            Voor elk® is een PowerBI dashboard ontwikkelt waarin overzichtelijk alle belangrijke afvalcijfers van elk® zijn weergegeven. Er is gebruikt gemaakt van PowerBI omdat elk® hier al reeds gebruik van maakt en ook medewerkers in dienst heeft die ervaring hebben met dit programma. Dit maakt het overdragen van de ontwikkelde applicatie aan elk® erg gemakkelijk. De cijfers die hieruit naar voor komen helpen elk® op verschillende manieren. Deze manieren zijn:
+            Voor elk® is een Power BI dashboard ontwikkeld waarin overzichtelijk alle belangrijke afvalcijfers van elk® zijn weergegeven. Er is gebruikgemaakt van Power BI omdat elk® hier al reeds gebruik van maakt en ook medewerkers in dienst heeft die ervaring hebben met dit programma. Dit maakt het overdragen van de ontwikkelde applicatie aan elk® erg gemakkelijk. De cijfers die hieruit naar voren komen helpen elk® op verschillende manieren. Deze manieren zijn:
           </p>
           <div class="row justify-content-center">
             <div class="col-md-8">
               <ul class="list-group list-group-flush text-center lead">
-                <li class="list-group-item bg-transparent border-0"><strong>1. De cijfers omtrent uitstoot, scheiding, hergebruik etc. kunnen relevant zijn voor eventuele rapportages die elk® zal moeten doen. Denk hierbij bijvoorbeeld aan het csrd rapport.</strong></li>
+                <li class="list-group-item bg-transparent border-0"><strong>1. De cijfers omtrent uitstoot, scheiding, hergebruik etc. kunnen relevant zijn voor eventuele rapportages die elk® zal moeten doen. Denk hierbij bijvoorbeeld aan het CSRD-rapport.</strong></li>
                 <li class="list-group-item bg-transparent border-0"><strong>2. Het is voor elk® relevant om per leverancier inzichtelijk te hebben hoeveel en welke afvalstromen zij in omloop hebben. Met deze informatie kan elk® gerichte plannen maken om CO₂-uitstoot te verminderen.</strong></li>
-                <li class="list-group-item bg-transparent border-0"><strong>3. elk® wil in de toekomst de hoeveelheid afvalleveranciers waarmee ze werken enorm te verminderen. Dit dashboard geeft inzichtelijk waar en hoeveel afval wordt verwerkt per leverancier. Deze informatie kan die keuze ondersteunen.</strong></li>
+                <li class="list-group-item bg-transparent border-0"><strong>3. elk® wil in de toekomst de hoeveelheid afvalleveranciers waarmee ze werken enorm verminderen. Dit dashboard maakt inzichtelijk waar en hoeveel afval wordt verwerkt per leverancier. Deze informatie kan die keuze ondersteunen.</strong></li>
               </ul>
             </div>
           </div>
@@ -135,11 +151,12 @@
       <ul class="list-unstyled">
         <li class="mb-2"><strong>1. Afvalverwerkers:</strong> Om data tussen leveranciers te vergelijken.</li>
         <li class="mb-2"><strong>2. Afvalstroom:</strong> Om inzicht te krijgen in specifieke afvalstromen.</li>
-        <li class="mb-2"><strong>3. Jaartal & regio:</strong> Voor inzicht over de afvalstomen per regio voor een specifieke tijdsperiode.</li>
+        <li class="mb-2"><strong>3. Jaartal & regio:</strong> Voor inzicht over de afvalstromen per regio voor een specifieke tijdsperiode.</li>
       </ul>
     </div>
 
     <div class="col-lg-7 text-center">
+      
       <img src="/images/Dashboard foto 1.png" class="img-fluid rounded shadow" alt="Agenda">
     </div>
   </div>
@@ -158,11 +175,12 @@
         <li class="mb-3"><strong>• Afvalcompositie (Percentages):</strong> De bovenste twee kaarten tonen de verhouding tussen BSA-afval (Bouw- en Sloopafval) en overige afvalstromen. Dit helpt elk® bij het monitoren van de afvalscheidingsdoelstellingen.</li>
         <li class="mb-3"><strong>• Totaal Tonnage & Kosten:</strong> De centrale kaarten geven het totale gewicht (Sum of Tonnage) en de totale investering (Sum of Kosten) weer. Direct daarnaast worden de Kosten per ton getoond, wat een essentiële graadmeter is voor de financiële efficiëntie van de gekozen afvalverwerkers.</li>
         <li class="mb-3"><strong>• Milieu-impact (CO₂):</strong> Aan de onderzijde wordt de balans opgemaakt tussen de Uitgestoten CO₂ en de Vermeden CO₂. Deze cijfers zijn gebaseerd op de geverifieerde data van verschillende instellingen, waardoor elk® hun milieuvoetafdruk kan aangeven in rapportages.</li>
-        <li class="mb-3"><strong>• Interactieve Filters:</strong> Net als op de tabelpagina kan de gebruiker filteren op afvalverwerker, afvalstroom, jaartal en regio. De cijfers op de kaarten passen zich direct aan de selectie aan, waardoor prestaties per regio of andere filter direct zichtbaar wordt.</li>
+        <li class="mb-3"><strong>• Interactieve Filters:</strong> Net als op de tabelpagina kan de gebruiker filteren op afvalverwerker, afvalstroom, jaartal en regio. De cijfers op de kaarten passen zich direct aan de selectie aan, waardoor prestaties per regio of andere filter direct zichtbaar worden.</li>
       </ul>
     </div>
 
     <div class="col-lg-7 text-center">
+      
       <img src="/images/Dashboard foto 2.png" class="img-fluid rounded shadow" alt="Overzicht contactgegevens">
     </div>
 
@@ -196,6 +214,7 @@
       </ul>
 
       <div class="text-center mt-5">
+        
         <img src="/images/Dashboard foto 3.png" class="img-fluid rounded shadow" alt="Overzicht contactgegevens">
       </div>
 
