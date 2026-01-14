@@ -1,0 +1,19 @@
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.35;
+}
+
+.page-header-section{
+    background-image: url('../images/nature.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.bg-custom {
+    background-color: black
+}
