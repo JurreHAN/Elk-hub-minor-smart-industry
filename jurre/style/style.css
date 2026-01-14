@@ -17,3 +17,10 @@
 .bg-custom {
     background-color: black
 }
+.custom-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    margin-top: 15px;
+}
