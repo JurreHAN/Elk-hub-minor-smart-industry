@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Website Template</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/Elk/style.css">
+  <link rel="stylesheet" href="/Elk/Opleverdocument.css">
+  <script src="/Elk/script.js"></script>
+
+  <style>
+    /* Voorkom horizontale scrollbar */
+    body {
+      overflow-x: hidden;
+    }
+
+    /* Hero Header knop geel met witte tekst */
+    .btn-ontdek {
+      background-color: #f8d200;
+      color: rgb(5, 5, 5);
+      border: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-ontdek:hover {
+      background-color: #e0b800;
+      color: rgb(7, 7, 7);
+    }
+
+    /* Hero header minimale hoogte */
+    .hero-header {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      padding: 3rem 0;
+      background-color: #333;
+      
+      /* Achtergrondafbeelding */
+      background-image: url('/images/Maarten\ uitleg.jpg'); 
+      background-size: cover;       /* Zorgt dat de foto het hele blok vult */
+      background-position: center;  /* Centreert de foto */
+      background-repeat: no-repeat; /* Voorkomt herhalen van de foto */
+      position: relative;
+    }
+
+    .btn-pill {
+      border-radius: 50px;
+      font-weight: 600;
+      background-color: #f8d200;
+      color: #000;
+      border: 2px solid #f8d200;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-pill:hover {
+      background-color: #e2be00;
+      border-color: #e2be00;
+      color: #000;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+    }
+
+    /* Stijl voor business case kaarten */
+    .bc-card {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        height: 100%;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        transition: transform 0.2s;
+    }
+    
+    .bc-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .bc-card.highlight {
+        border-top: 5px solid #f8d200;
+        background-color: #fffbf0; /* Zeer lichte gele tint voor de achtergrond */
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+  <div class="container">
+
+    <a class="navbar-brand" href="#">
+      <img src="../images/Elk-1699353145.7769.png" alt="Logo" style="height: 70px; width: auto;">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMenu">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="../Elk/index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Contactgegevens">Contact</a></li>
+      </ul>
+
+      <a class="d-none d-lg-block ms-auto" href="#">
+        <img src="../images/han_university.svg" alt="Rechtsboven Afbeelding" style="height: 90px; width: auto;">
+      </a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero-header d-flex align-items-center">
+  <div class="container text-white position-relative">
+    <h1 class="display-4 fw-bold">Business modellen</h1>
+    <p class="lead mt-3">Op deze pagina zullen alle behandelde modellen worden getoond en besproken</p>
+  </div>
+</header>
+
+<div class="container py-5">
+  <div class="row justify-content-center text-center">
+    <div class="col-lg-8">
+
+      <h3 class="mb-4">Welke modellen zijn behandeld?</h3>
+
+      <div class="row">
+        <div class="col-12 text-center mt-4">
+            <p class="lead">Een deel van deze minor richt zich meer op de businesskant van een digitale transformatie binnen een organisatie. Ook voor dit onderdeel zijn diverse lessen, workshops en gastsprekers geweest die veel inzicht hebben geboden. Onder andere Maarten van Gils en Menno Herkes hebben deze lessen verzorgd. Om de opgedane kennis te testen, zijn er door de projectgroep verschillende modellen toegepast op de organisatie en uitgewerkt binnen elk®. De modellen spelen allen in op het model dat hiernaast te zien is. De modellen worden verder op deze pagina getoond.</p>
+        </div>
+      </div>
+
+        <hr class="featurette-divider">
+
+    <div class="container text-center">
+      <div class="d-flex flex-wrap justify-content-center">
+        <a href="#Stakeholdersanalyse" class="btn btn-pill m-2 px-4 shadow-sm">Stakeholderanalyse</a>
+        <a href="#Communicatieplan" class="btn btn-pill m-2 px-4 shadow-sm">Communicatieplan</a>
+        <a href="#TOM-model" class="btn btn-pill m-2 px-4 shadow-sm">TOM-model</a>
+        <a href="#Business case" class="btn btn-pill m-2 px-4 shadow-sm">Business case</a>
+        <a href="#Het BMC" class="btn btn-pill m-2 px-4 shadow-sm">Het BMC</a>
+      </div>
+    </div>
+      </div>
+
+       <hr class="featurette-divider">
+
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 id="Stakeholdersanalyse" class="featurette-heading">Stakeholderanalyse</h2>
+        <p class="lead">Om het bedrijf goed te leren kennen en een goed beeld te krijgen van de betrokkenen bij het project, is er een stakeholderanalyse uitgevoerd. Echter, tijdens dit proces werd door Emma Zwartjens aangegeven dat er reeds een stakeholderanalyse bestond. Zie deze hieronder.</p>
+        
+        <div class="row mt-4 mb-4 justify-content-center">
+          <div class="col-md-6 mb-3">
+            <img src="/milo/Images/Stakeholdersanalyse 1.png" class="img-fluid rounded shadow-sm" alt="Stakeholder 1" style="width: 100%;">
+          </div>
+          <div class="col-md-6 mb-3">
+            <img src="/milo/Images/Stakeholdersanalyse 2.png" class="img-fluid rounded shadow-sm" alt="Stakeholder 2" style="width: 100%;">
+          </div>
+        </div>
+
+        <p class="lead">Dit betreft echter een algemene stakeholderanalyse van het bedrijf die niet direct betrekking heeft op de specifieke opdracht, daarom is er een lijst opgesteld met de personen/groepen die daadwerkelijk betrokken zijn bij het project.</p>
+        
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <ul class="list-unstyled lead text-left" style="column-count: 2; column-gap: 40px;">
+              <li><strong>• Kevin Balm (analist binnen elk®)</strong></li>
+              <li><strong>• Het ESG-team van elk®</strong></li>
+              <li><strong>• Karl Messinger (klimaat-expert binnen elk®)</strong></li>
+              <li><strong>• Emma Zwartjens</strong></li>
+              <li><strong>• Groepsdirectie</strong></li>
+              <li><strong>• Regiodirectie</strong></li>
+              <li><strong>• Team duurzaamheid & innovatie</strong></li>
+              <li><strong>• Sven Dresen (IT-expert binnen elk®)</strong></li>
+              <li><strong>• Mathieu Stijsiger (hoofd inkoop binnen elk®)</strong></li>
+              <li><strong>• Toekomstige geïnteresseerden</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 id="Communicatieplan" class="featurette-heading">Communicatieplan</h2>
+        <p class="lead">Er is geen volledig communicatieplan geschreven voor dit onderzoek. Hier is voor gekozen omdat het duidelijk was wie benaderd en geïnformeerd moest worden en op welke wijze. Zo is er bijvoorbeeld een lijst opgesteld met de personen die gaan werken met het nieuwe systeem. Er is meerdere malen met deze personen gesproken om de wensen te inventariseren, zodat alle partijen hun wensen terugzien in het nieuwe systeem. Ook de partijen waarvan informatie nodig was, bijvoorbeeld de leveranciers, zijn op een professionele manier benaderd en indien nodig gevraagd om medewerking. Op deze wijze is het proces doorlopen. Het was duidelijk wie de stakeholders zijn, wat zij wilden zien en hoe dit overgebracht moest worden. Zo is er bijvoorbeeld op 20 januari een presentatie gehouden voor alle stakeholders binnen elk®. Hierin is verteld en gedemonstreerd wat er gedaan is en hoe het werkt. Hiermee zijn alle stakeholders geïnformeerd over de resultaten en gevolgen van het onderzoek.</p>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 id="TOM-model" class="featurette-heading">Het TOM-model 'Target Operating Model'</h2>
+        <p class="lead">Het TOM-model is een strategisch overzicht dat beschrijft hoe een organisatie haar processen, mensen, technologie en systemen inricht om een toekomstige strategie/richting te realiseren. Het verbindt de strategie met operatie. Dit model is tevens uitgewerkt voor elk®, waardoor een beter beeld is verkregen hoe de processen van elk® in verbinding staan met de diensten die worden uitgevoerd.</p>
+      </div>
+      <div class="col-md-5">
+        <img src="/milo/Images/TOM-model.png" alt="TOM Model" class="img-fluid" style="max-height: 300px;">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 id="Business case" class="featurette-heading">Business case</h2>
+        <p class="lead">Een business case is een document waarin de zakelijke rechtvaardiging staat van een project. Het is van groot belang dat dit wordt opgesteld; als het blijkt dat een project alleen maar lasten heeft, heeft het niet zoveel zin om het te realiseren. Uiteraard is er ook een business case opgesteld. Deze is helaas wel gewijzigd ten opzichte van het originele plan. Het bleek namelijk dat de leveranciers nog niet zo meewerkend waren als gepland, waardoor er een advies geschreven moest worden waar elk® mee verder kan. De conclusies worden hieronder getoond, de verdere onderbouwing ervan staat in bijlage 6 van het onderzoeksdocument. Aangezien er voor elk® drie adviezen zijn geschreven, zijn er ook drie business cases afhankelijk van het gekozen advies.</p>
+        
+        <div class="row justify-content-center mt-5 text-start">
+            
+            <div class="col-md-4 mb-3">
+                <div class="bc-card highlight">
+                    <h5 class="fw-bold">Advies 1: API’s ontwikkelen voor dataoverdracht van afvalleveranciers naar elk® (aanbevolen).
+                    <ul class="list-unstyled small mt-3">
+                        <li><strong>• Periodiek resultaat:</strong> Na aftrek van onderhoudskosten een netto besparing van € 228,- per half jaar.</li>
+                        <li><strong>• Jaarlijks resultaat:</strong> Vanaf het tweede jaar bedraagt de structurele besparing € 456,- per jaar.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="bc-card">
+                    <h5 class="fw-bold">Advies 2: Handmatig invullen van afvalrapportage door een medewerker van elk®.</h5>
+                    <ul class="list-unstyled small mt-3">
+                        <li><strong>• Kosten:</strong> €</li>
+                        <li><strong>• Baten:</strong> € [Bedrag]</li>
+                        <li><strong>• Resultaat:</strong> [Omschrijving]</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="bc-card">
+                    <h5 class="fw-bold">Advies 3: Advies 3: Handmatig invullen van afvalrapportage door afvalleveranciers.</h5>
+                    <p class="small">Beschrijving van het derde scenario (bijv. stoppen of handhaven huidige situatie).</p>
+                    <ul class="list-unstyled small mt-3">
+                        <li><strong>• Kosten:</strong> €370,50 per half jaar en dus €741,- per jaar.</li>
+                        <li><strong>• Baten:</strong> Aangezien Emma Zartjens het niet meer zelf hoeft te doen, zullen de kosten voor haar wegvallen en zijn de kosten die hierboven worden genoemd dus minder. Ook is het proces dan volledig automatisch omdat alle data dan wordt aangeleverd zoals origineel bedoeld was.</strong> </li>
+                        <li><strong>• Resultaat:</strong> De handeling van het data opleveren/invullen ligt bij de andere partijen, elk® hoeft dus niets meer te doen omtrent data invullen of overzetten. Het dashboard wordt dan automatisch gevuld met de gewenste data.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 id="Het BMC" class="featurette-heading">Het BMC 'Business Model Canvas'</h2>
+        <p class="lead">Het BMC (Business Model Canvas) is een organisatie-analysemodel. Het is een visueel hulpmiddel om het bedrijfsmodel in één overzichtelijke afbeelding te visualiseren. D.m.v. negen bouwstenen die beschrijven hoe het bedrijf waarde creëert, levert en verzilvert. Tevens is dit model door de projectgroep uitgewerkt om de kern van elk® beter te doorgronden en zo gerichter het project uit te kunnen voeren. Het BMC is hieronder te zien.</p>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-4">
+      <div class="col-12">
+        <img src="/milo/Images/BMC2.png" alt="BMC elk" class="img-fluid rounded shadow" style="width: 100%; border: 1px solid #ddd;">
+      </div>
+    </div>
+      
+    </div>
+  </div>
+</div>
+
+<section id="Contactgegevens" class="contact-gradient-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 offset-lg-1 contact-box">
+
+        <h4>Contactgegevens</h4>
+
+        <table>
+          <thead>
+            <tr>
+              <th style="padding-right: 30px;">Email:</th>
+              <th>Studentennummer:</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding-right: 30px;">jjc.deklijn@student.han.nl</td>
+              <td>2108958</td>
+            </tr>
+            <tr>
+              <td style="padding-right: 30px;">lw.veeken@student.han.nl</td>
+              <td>2117956</td>
+            </tr>
+            <tr>
+              <td style="padding-right: 30px;">cwt.nijsen@student.han.nl</td>
+              <td>1666566</td>
+            </tr>
+            <tr>
+              <td style="padding-right: 30px;">mt.bergsma@student.han.nl</td>
+              <td>2114061</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
