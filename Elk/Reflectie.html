@@ -30,6 +30,91 @@
       color: rgb(7, 7, 7);
     }
 
+    /* Nieuwe stijl voor de Word Download Knop (Aangepast naar Geel) */
+    .btn-word {
+      background-color: #f8d200; /* Zelfde geel als btn-ontdek */
+      color: rgb(5, 5, 5);       /* Donkere tekst voor leesbaarheid op geel */
+      border: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 25px;
+    }
+
+    .btn-word:hover {
+      background-color: #e0b800; /* Zelfde hover kleur */
+      color: rgb(7, 7, 7);
+    }
+
+    .word-icon {
+      height: 20px;
+      width: 20px;
+      fill: rgb(5, 5, 5); /* Icoon ook donker maken zodat het past bij de tekst */
+    }
+
+    /* Stijl voor de reflectie lijsten */
+    .reflection-card {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 25px;
+        height: 100%;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        border-top: 5px solid #ccc; /* Fallback */
+    }
+
+    .reflection-card.pros {
+        border-top-color: #198754; /* Groen */
+    }
+
+    .reflection-card.cons {
+        border-top-color: #dc3545; /* Rood */
+    }
+
+    /* Stijl voor het vervolgstappen blok */
+    .next-steps-card {
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        padding: 30px;
+        border-left: 5px solid #f8d200; /* Gele accentkleur */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .reflection-list {
+        list-style: none;
+        padding-left: 0;
+        text-align: left;
+    }
+
+    .reflection-list li {
+        margin-bottom: 12px;
+        position: relative;
+        padding-left: 30px;
+    }
+
+    .reflection-list.pros li::before {
+        content: '✔';
+        position: absolute;
+        left: 0;
+        color: #198754;
+        font-weight: bold;
+    }
+
+    .reflection-list.cons li::before {
+        content: '⚠';
+        position: absolute;
+        left: 0;
+        color: #dc3545;
+        font-weight: bold;
+    }
+
+    /* Pijl stijl */
+    .arrow-container {
+        color: #aaa;
+        margin: 20px 0;
+    }
+
     /* Hero header minimale hoogte */
     .hero-header {
       min-height: 60vh;
@@ -38,7 +123,7 @@
       padding: 3rem 0;
       background-color: #333;
       
-      /* Achtergrondafbeelding (spatie vervangen door %20 voor veiligheid) */
+      /* Achtergrondafbeelding */
       background-image: url('/images/Feedback\ elk\ 2.0.png'); 
       background-size: cover;       /* Zorgt dat de foto het hele blok vult */
       background-position: center;  /* Centreert de foto */
@@ -77,26 +162,96 @@
 <header class="hero-header d-flex align-items-center">
   <div class="container text-white position-relative">
     <h1 class="display-4 fw-bold">Reflectie op het onderzoek</h1>
-    <p class="lead mt-3">Op deze pagina zal worden gereflecteerd op de verloop van dit onderzoek en de reflectie van de organisatie op de onderzoekers.</p>
+    <p class="lead mt-3">Op deze pagina zal worden gereflecteerd op het verloop van dit onderzoek en de evaluatie van de organisatie op de onderzoekers.</p>
   </div>
 </header>
 
 <div class="container py-5">
   <div class="row justify-content-center text-center">
-    <div class="col-lg-8">
+    <div class="col-lg-10">
+        
+        <h3 class="mb-4">Het evaluatieformulier vanuit elk®</h3>
 
-      <h3 class="mb-4">Waarom geven wij advies?</h3>
+        <a href="/Elk/Documenten/Feedback Emma Zwartjens.docx" class="btn btn-lg btn-word mb-4" download>
+          <svg class="word-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+             <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+          </svg>
+          Download Word-bestand
+        </a>
 
-      <div class="row">
-        <div class="col-12 text-center mt-4">
-          <p class="lead">
-            Zoals ook in het onderzoeksdocument is toegelicht, is het helaas niet gelukt om het systeem volledig werkende te krijgen. De producten zijn wel werkende aangeleverd, echter ligt het probleem momenteel helaas bij de leveranciers. De meeste leveranciers gaven aan dat ze niet de zin, tijd of middelen hadden om het Excel-document in te vullen dat is opgesteld voor dit onderzoek. Deze verstarringen zijn zeer nadelig voor de resultaten van dit onderzoek aangezien, nu de leveranciers er niet mee willen werken, het systeem niet aangevuld wordt met data. Hierdoor is het noodzakelijk om te kijken naar de verdere opties voor dit onderzoek en de toekomst voor elk® met dit project. Er is gekozen om verschillende adviezen uit te werken waar elk® verder mee kan om dit systeem toch werkende te krijgen. Deze adviezen zullen hieronder worden toegelicht en onderbouwd.
-          </p>
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+                <p class="lead">
+                    Vanuit het evaluatieformulier vallen verschillende dingen op. De algehele conclusie van de opdrachtgever is positief: het team is erin geslaagd de opdracht met een "goede voldoende" te vervullen. Emma geeft aan dat elk® ondanks enkele "kleine open eindjes" zeker verder kan met het resultaat. 
+                </p>
+            </div>
+        </div>
+
+        <div class="row text-start mb-2">
+            
+            <div class="col-md-6 mb-4">
+                <div class="reflection-card pros">
+                    <h4 class="text-success mb-3">Sterke punten</h4>
+                    <ul class="reflection-list pros">
+                        <li><strong>Samenwerking & Structuur:</strong> Het team functioneerde uitstekend. Iedereen pakte zijn eigen rol en het proces verliep gestructureerd.</li>
+                        <li><strong>Duidelijke start:</strong> Het projectplan werd als heel duidelijk en logisch ervaren door de organisatie.</li>
+                        <li><strong>Organisatiesensitiviteit:</strong> Er is goed geluisterd naar de verschillende belangen binnen elk® en hierop zijn de keuzes gebaseerd.</li>
+                        <li><strong>Strategische keuze:</strong> De keuze voor Power BI wordt gewaardeerd omdat dit aansluit bij de bestaande software binnen het bedrijf.</li>
+                        <li><strong>Visueel resultaat:</strong> Het dashboard ziet er volgens de opdrachtgever zeer goed uit.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="reflection-card cons">
+                    <h4 class="text-danger mb-3">Aandachtspunten</h4>
+                    <ul class="reflection-list cons">
+                        <li><strong>Proactiviteit:</strong> Er had actiever gezocht mogen worden naar oplossingen toen leveranciers niet meewerkten (bellen i.p.v. mailen).</li>
+                        <li><strong>Data-integratie proces:</strong> Het is voor de organisatie nog niet geheel duidelijk hoe de data uiteindelijk in het dashboard terechtkomt ("kleine open eindjes").</li>
+                        <li><strong>Rapportage:</strong> Het schriftelijke rapport werd als minder overzichtelijk ervaren en behoeft nog verbetering.</li>
+                        <li><strong>Diepgang analyse:</strong> De technologische analyse naar afvalverwerkers en brongebruik had uitgebreider gemogen.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center arrow-container">
+            <div class="col-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="next-steps-card text-start">
+                    <h3 class="text-center mb-4">Vervolgstappen</h3>
+                    <p>Aangezien deze feeback enkele dagen voor de deadline van het project is gegeven, hebben we nog enkele verbeteringen kunnen doen en hebben we meegenomen wat uit deze reflectie is gekomen.</p>
+                    
+                    <ul class="list-group list-group-flush bg-transparent">
+                        <li class="list-group-item bg-transparent border-0 px-0">
+                            <strong>1. Herstructurering rapport</strong> A.d.h.v. de feedback is het onderzoeksdocument reeds ge herstructureerd om het zo duidelijker en overzichtelijker te maken. Hierdoor is de leesbaarheid van het document zeer verbeterd. Er zijn door Emma verschillende verbeteringen aangegeven die wij in het document konden toepassen en die zijn allemaal aangepast.
+                        </li>
+                        <li class="list-group-item bg-transparent border-0 px-0">
+                            <strong>2. Verdiepende analyse d.m.v. bronvermelding</strong> Om verschillende stukken in het onderzoek sterker over te laten komen, is er beter gekeken naar de bronvermelding en onderbouwing van de uitspraken. Hierdoor is het advies beter ondersteund en is het algehele document professioneler onderbouwd.
+                        </li>
+                        <li class="list-group-item bg-transparent border-0 px-0">
+                            <strong>3. Verbetering proactiviteit</strong> De feedback over het verkrijgen van data is zeker meegenomen. Echter door het einde van de projectduur zal deze feedback zeker worden meegenomen naar verdere onderzoeken.
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10">
+                <p class="lead">
+                    De resultaten uit dit evaluatieformulier geven een goed beeld van de verloop van het project. Ook de onderzoekers beamen dat dit eigenlijk wel acuraat is, zeker de aandachtspunten zijn punten waaraan gewerkt moet worden in de toekomst. Zoals hierboven beschreven staat, zijn enkele van deze punten al meegenomen en verwerkt. Maar andere punten zijn meer voor volgende projecten toepasbaar.
+                </p>
+            </div>
         </div>
       </div>
-      
     </div>
-  </div>
 </div>
 
 <section id="Contactgegevens" class="contact-gradient-section py-5">
