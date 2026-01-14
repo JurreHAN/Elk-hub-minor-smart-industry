@@ -79,6 +79,28 @@
       scroll-behavior: smooth;
       scroll-padding-top: 80px; 
     }
+
+    /* Stijlen voor business case kaarten overgenomen uit Code 1 */
+    .bc-card {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        height: 100%;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        transition: transform 0.2s;
+        text-align: left;
+    }
+    
+    .bc-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .bc-card.highlight {
+        border-top: 5px solid #f8d200;
+        background-color: #fffbf0;
+    }
   </style>
 </head>
 
@@ -205,19 +227,45 @@
     <div class="row">
       <div class="col-12 text-center">
         <h2 id="Business case" class="featurette-heading">Business case</h2>
-        <p class="lead">Een business case is een document waarin de zakelijke rechtvaardiging staat van een project. Het is van groot belang dat dit wordt opgesteld; als het blijkt dat een project alleen maar lasten heeft, heeft het niet zoveel zin om het te realiseren. Uiteraard hebben wij ook een business case opgesteld. Hij is helaas wel wat veranderd ten opzichte van wat wij origineel voor ogen hadden. Het bleek namelijk dat de leveranciers nog niet zo meewerkend waren als gepland, hierdoor hebben wij een advies moeten schrijven waar elk® mee verder kan. Zie hier meer over op de website van het elk® project. Ik zal de conclusie hieronder laten zien, de verdere onderbouwing ervan staat in bijlage 6 van het onderzoeksdocument.</p>
-        <p class="lead"><strong>Het project resulteert in een positieve business case op de lange termijn:</strong></p>
-        <div class="row justify-content-center">
-          <div class="col-md-10">
-            <ul class="list-unstyled lead text-left">
-              <li><strong>• Periodiek resultaat: Na aftrek van de onderhoudskosten levert de oplossing een netto besparing op van € 228,- per half jaar.</strong></li>
-              <li><strong>• Jaarlijks resultaat: Vanaf het tweede jaar (wanneer de eenmalige kosten zijn afgeschreven) bedraagt de structurele besparing € 456,- per jaar.</strong></li>
-            </ul>
-          </div>
+        <p class="lead">Een business case is een document waarin de zakelijke rechtvaardiging staat van een project. Het is van groot belang dat dit wordt opgesteld; als het blijkt dat een project alleen maar lasten heeft, heeft het niet zoveel zin om het te realiseren. Uiteraard is er ook een business case opgesteld. Deze is helaas wel gewijzigd ten opzichte van het originele plan. Het bleek namelijk dat de leveranciers nog niet zo meewerkend waren als gepland, waardoor er een advies geschreven moest worden waar elk® mee verder kan. De conclusies worden hieronder getoond, de verdere onderbouwing ervan staat in bijlage 6 van het onderzoeksdocument. Aangezien er voor elk® drie adviezen zijn geschreven, zijn er ook drie business cases afhankelijk van het gekozen advies.</p>
+        
+        <div class="row justify-content-center mt-5 text-start">
+            
+            <div class="col-md-4 mb-3">
+                <div class="bc-card highlight">
+                    <h5 class="fw-bold">Advies 1: API’s ontwikkelen voor dataoverdracht van afvalleveranciers naar elk® (aanbevolen).</h5>
+                    <ul class="list-unstyled small mt-3">
+                        <li><strong>• Periodiek resultaat:</strong> Na aftrek van onderhoudskosten een netto besparing van € 228,- per half jaar.</li>
+                        <li><strong>• Jaarlijks resultaat:</strong> Vanaf het tweede jaar bedraagt de structurele besparing € 456,- per jaar.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="bc-card">
+                    <h5 class="fw-bold">Advies 2: Handmatig invullen van afvalrapportage door een medewerker van elk®.</h5>
+                    <ul class="list-unstyled small mt-3">
+                        <li><strong>• Kosten:</strong> €370,50 per half jaar en dus €741,- per jaar.</li>
+                        <li><strong>• Baten:</strong> De baten hiervan zijn dat de gegevens op de gewenste manier binnenkomen in het dashboard en alles nogsteeds overzichtelijk te zien is.</li>
+                        <li><strong>• Resultaat:</strong> Voor het bovenstaande bedrag heeft elk® een gevuld dashboard. Echter kost het wel te tijd van een medewerker binnen elk® om dit handmatig over te zetten. Dit zorgt ervoor dat het proces niet meer volledig automatisch verloopt.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="bc-card">
+                    <h5 class="fw-bold">Advies 3: Handmatig invullen van afvalrapportage door afvalleveranciers.</h5>
+                    <ul class="list-unstyled small mt-3">
+                        <li><strong>• Kosten:</strong> €370,50 per half jaar en dus €741,- per jaar.</li>
+                        <li><strong>• Baten:</strong> Aangezien Emma Zartjens het niet meer zelf hoeft te doen, zullen de kosten voor haar wegvallen en zijn de kosten die hierboven worden genoemd dus minder. Ook is het proces dan volledig automatisch omdat alle data dan wordt aangeleverd zoals origineel bedoeld was. </li>
+                        <li><strong>• Resultaat:</strong> De handeling van het data opleveren/invullen ligt bij de andere partijen, elk® hoeft dus niets meer te doen omtrent data invullen of overzetten. Het dashboard wordt dan automatisch gevuld met de gewenste data.</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
       </div>
     </div>
-
     <hr class="featurette-divider">
 
     <div class="row">
