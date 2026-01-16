@@ -21,6 +21,10 @@ body {
   min-height: 100vh;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .bg-shapes {
   position: fixed;
   inset: 0;
@@ -213,6 +217,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
+  align-items: start;
 }
 
 .api-card {
@@ -222,7 +227,8 @@ main {
   border: 1px solid var(--outline);
   box-shadow: 0 12px 30px rgba(11, 31, 36, 0.08);
   display: grid;
-  gap: 14px;
+  gap: 10px;
+  align-content: start;
   animation: floatIn 0.7s ease both;
 }
 
@@ -231,6 +237,10 @@ main {
   justify-content: space-between;
   align-items: center;
   gap: 12px;
+}
+
+.api-head h3 {
+  margin: 0;
 }
 
 .badge {
@@ -242,27 +252,67 @@ main {
 
 .api-status {
   color: var(--subtle);
+  margin: 0;
+}
+
+.weather-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: linear-gradient(120deg, rgba(31, 164, 164, 0.18), rgba(241, 143, 59, 0.18));
+  border: 1px solid var(--outline);
 }
 
 .weather-row {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
 }
 
 .weather-row img {
-  width: 70px;
-  height: 70px;
+  width: 64px;
+  height: 64px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid var(--outline);
 }
 
 .weather-city {
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 .weather-desc {
   color: var(--subtle);
   text-transform: capitalize;
+}
+
+.weather-temp {
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.weather-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.weather-badge {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(11, 31, 36, 0.06);
+  color: var(--subtle);
+  font-size: 0.9rem;
 }
 
 .weather-metrics {
@@ -271,7 +321,53 @@ main {
   margin: 12px 0 0;
   color: var(--subtle);
   display: grid;
-  gap: 6px;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(241, 143, 59, 0.08);
+  border: 1px solid var(--outline);
+}
+
+.api-photo {
+  margin: 24px auto 0;
+  max-width: 980px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--outline);
+  background: var(--surface);
+  box-shadow: 0 12px 30px rgba(11, 31, 36, 0.08);
+}
+
+.api-photo--inline {
+  margin: 12px 0 0;
+  max-width: none;
+  box-shadow: none;
+}
+
+.api-photo--wide {
+  max-width: 100%;
+}
+
+.api-photo img {
+  width: 100%;
+  display: block;
+}
+
+.api-photo video {
+  width: 100%;
+  display: block;
+}
+
+.video-wide {
+  aspect-ratio: 21 / 9;
+  object-fit: contain;
+  background: #000;
+}
+
+.api-photo figcaption {
+  padding: 12px 16px 14px;
+  color: var(--subtle);
+  font-size: 0.95rem;
 }
 
 .nasa-figure {
@@ -316,6 +412,170 @@ main {
   border: 1px solid var(--outline);
 }
 
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 16px 0 28px;
+}
+
+.photo-grid--small {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  max-width: 760px;
+}
+
+@media (min-width: 980px) {
+  .photo-grid--small {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: none;
+  }
+}
+
+.float-right {
+  float: right;
+  width: min(240px, 40%);
+  margin: 0 0 16px 16px;
+  background: var(--surface);
+  border-radius: 14px;
+  border: 1px solid var(--outline);
+  overflow: hidden;
+  box-shadow: 0 10px 22px rgba(11, 31, 36, 0.08);
+}
+
+.float-right--small {
+  width: 160px;
+  margin-top: 44px;
+}
+
+.float-right--medium {
+  width: 220px;
+}
+
+.float-right img {
+  width: 100%;
+  display: block;
+}
+
+.float-right figcaption {
+  padding: 8px 10px 10px;
+  color: var(--subtle);
+  font-size: 0.85rem;
+}
+
+.photo-row {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) auto;
+  gap: 16px;
+  align-items: start;
+}
+
+.photo-row figure {
+  align-self: start;
+}
+
+.photo-row h2 {
+  margin-top: 8px;
+  max-width: 520px;
+}
+
+.topic-list {
+  padding-left: 20px;
+  margin: 12px 0 0;
+}
+
+.topic-list li {
+  margin: 0 0 14px;
+}
+
+.topic-list li::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.api-item {
+  padding-top: 8px;
+}
+
+.no-gap {
+  margin-top: 0;
+}
+
+.clear-both {
+  clear: both;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.photo-grid figure {
+  margin: 0;
+  background: var(--surface);
+  border-radius: 16px;
+  border: 1px solid var(--outline);
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(11, 31, 36, 0.08);
+}
+
+.photo-grid img {
+  width: 100%;
+  display: block;
+}
+
+.photo-grid figcaption {
+  padding: 10px 14px 12px;
+  color: var(--subtle);
+  font-size: 0.9rem;
+}
+
+.photo-narrow {
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider {
+  position: relative;
+  margin: 16px 0 28px;
+  border-radius: 18px;
+  border: 1px solid var(--outline);
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: 0 12px 28px rgba(11, 31, 36, 0.08);
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.6s ease;
+  width: 100%;
+}
+
+.slide {
+  flex: 0 0 100%;
+  margin: 0;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+  height: 360px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.slide figcaption {
+  padding: 12px 16px 14px;
+  color: var(--subtle);
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.9);
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -324,6 +584,30 @@ main {
   padding: 20px clamp(20px, 4vw, 64px) 40px;
   color: var(--subtle);
   border-top: 1px solid var(--outline);
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 31, 36, 0.78);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 50;
+}
+
+.lightbox.is-open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 92vw;
+  max-height: 92vh;
+  border-radius: 16px;
+  border: 1px solid var(--outline);
+  background: #fff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes floatIn {
