@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zelfassessment & Reflectie | Luuk Veeken</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="stylesheet" href="../static/css/stylesheet.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/reflection.css">
+</head>
+
+<body>
+    <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <nav class="scroll-nav">
+        <div class="scroll-dot" data-label="C1: Analyse" onclick="scrollToComp(0)"></div>
+        <div class="scroll-dot" data-label="C2: Overweging" onclick="scrollToComp(1)"></div>
+        <div class="scroll-dot" data-label="C3: Transformatie" onclick="scrollToComp(2)"></div>
+        <div class="scroll-dot" data-label="C4: Samenwerken" onclick="scrollToComp(3)"></div>
+        <div class="scroll-dot" data-label="C5: Ontwikkeling" onclick="scrollToComp(4)"></div>
+    </nav>
+    <div id="weather-background-layer"></div>
+
+    <div id="navbar"></div>
+
+    <main class="container">
+        <header class="hero-section">
+            <a href="base.html" class="btn-back"><i class="bi bi-chevron-left me-2"></i> Back to home</a>
+            <h1 class="display-3 fw-bold">Zelfassessment</h1>
+            <p class="lead text-secondary">Mijn ontwikkeling en zelfreflectie terugkijkend op de minor</p>
+        </header>
+
+        <div class="col-12 mb-5">
+            <div class="d-flex justify-content-center">
+                <div class="apple-card d-inline-flex align-items-center py-2 px-4" 
+                    style="height: auto; border-radius: 100px; background: rgba(0, 102, 204, 0.1) !important; backdrop-filter: blur(10px); border: 1px solid rgba(0, 102, 204, 0.2);">
+                    
+                    <p class="mb-0 small" style="color: var(--apple-blue); font-weight: 500;">
+                        <i class="bi bi-translate me-2" style="color: var(--apple-blue);"></i>
+                        Note: This section is written in Dutch because I can express my reflections better in my native language.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="reflection-container">
+            <div class="apple-card mb-5 p-4 p-md-5">
+                <h5 class="card-sub mb-4" style="letter-spacing: 2px; font-size: 1.2rem;">Persoonlijke leerdoelen</h5>
+                 
+                <div class="learning-goals-list">
+                    <div class="d-flex align-items-start pb-3 mb-3 border-bottom border-light">
+                        <div class="goal-icon me-3">
+                            <i class="bi bi-check2-circle text-success fs-5"></i>
+                        </div>
+                        <div>
+                            <span class="fw-bold d-block mb-1">Focus op de opdracht</span>
+                            <p class="small text-muted mb-0">Leren werken aan de taken die specifiek van de klant gevraagd worden, in plaats van mijn eigen mening of voorkeuren de overhand te laten krijgen.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start pb-3 mb-3 border-bottom border-light">
+                        <div class="goal-icon me-3">
+                            <i class="bi bi-check2-circle text-success fs-5"></i>
+                        </div>
+                        <div>
+                            <span class="fw-bold d-block mb-1">Minder perfectionisme</span>
+                            <p class="small text-muted mb-0">Minder perfectionistisch zijn in de uitvoering, zodat de balans tussen tijdsinvestering en resultaat optimaal blijft.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start pb-3 mb-3 border-bottom border-light">
+                        <div class="goal-icon me-3">
+                            <i class="bi bi-check2-circle text-success fs-5"></i>
+                        </div>
+                        <div>
+                            <span class="fw-bold d-block mb-1">Business kennis</span>
+                            <p class="small text-muted mb-0">Mijn business kennis verbreden en dieper inzicht krijgen in de interne processen en werking van bedrijven.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start">
+                        <div class="goal-icon me-3">
+                            <i class="bi bi-check2-circle text-success fs-5"></i>
+                        </div>
+                        <div>
+                            <span class="fw-bold d-block mb-1">Product ontwikkeling</span>
+                            <p class="small text-muted mb-0">Mezelf verder ontwikkelen in het proces van product ontwerp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comp-card">
+                <span class="comp-badge">Competentie 1</span>
+                <h2>Analyseren van behoeften tav inzet technologie</h2>
+                <div class="reflection-text">
+                    <p>
+                        Voor dit project was het belangrijk dat het eindresultaat strak aansloot op de behoefte van de klant (elk®). Als team hebben we daarom snel contact opgenomen en een wekelijkste meeting ingepland met het bedrijf. 
+                        Dit heeft ervoor gezorgd dat er wekelijks doelen werden gemaakt en aangescherpt, feedback werd gegeven en het project werd besproken. In mijn voorgaande projecten was de klantbehoefte niet zo belangrijk als nu. 
+                        En ook was er niet zo veel contact met de klant. Als ik terugkijk was dit een erg prettige manier van contact wat zowel voor de klant als voor mijzelf voordelig is. De kans dat je aan iets werkt wat de klant helemaal niet nodig heeft wordt aanzienlijk verkleind*. 
+                        Toen we wisten wat elk® wilde zijn we begonnen met ons eerst verdiepen in het onderwerp en het bedrijf. Hierbij heb ik naar betrouwbare bronnen gezorgd zodat de informatie die ik opdeed juist was en daarmee de juiste input kon geven voor het project. 
+                        Voor sommige onderwerpen was het lastig om betrouwbare bronnen te kiezen, zoals de CO2 uitstoot voor het afval van elk®. Gelukkig  hebben we samen met de medewerkers van elk deze problemen op een goede manier aangepakt. 
+                    </p>
+                    <p>
+                        *Dit is voor mij vaak een valkuil geweest in projecten. Ik ben bij sommige opdrachten te perfectionistisch waardoor ik aan een kleine taak veel tijd besteed terwijl deze taak niet van groot belang is. 
+                        Hierdoor kan ik af en toe te veel tijd besteden aan onnodige taken en het daadwerkelijke doel uit het oog verliezen. Echter was dat deze minor minimaal. Alleen bij mijn website heb ik dit gehad. 
+                        Ik wilde alles weer perfect hebben maar dit is erg lastig dus daar heb eigenlijk te veel tijd aan besteed omdat het niet per se nodig was.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="comp-card">
+                <span class="comp-badge">Competentie 2</span>
+                <h2>Overwegen –wijze van- inzet technologie</h2>
+                <div class="reflection-text">
+                    <p>
+                        Aan het beginnen is veel onderzoek gedaan naar hoe het bedrijf elk precies werkt en wat voor we technologie we moeten inzetten aan de hand hiervan. Er waren voor ons project veel tools beschikbaar om te gebruiken. 
+                        Echter hebben we grondig geanalyseerd hoe elk als bedrijf werkt en wat voor tools het beste bij het bedrijf passen. Aan de hand van deze analyses hebben we een product gemaakt dat voor elk het beste werkt. 
+                        Tijdens de workshops hebben we uitleg gekregen over hoe bedrijven AI toepassen en ook moesten wij als groepje nagaan of het voor ons voordelig was om AI te gebruiken. Al snel werd al duidelijk dat voor ons doel AI niet nodig was. 
+                        Op dit moment was het ophalen van data en het weergeven het belangrijkste. De basis hiervoor moest zonder AI. Echter zou AI een erg handige toepassing zijn voor het analyseren van de grote hoeveelheid data die elk® heeft over het geproduceerde afval. 
+                        Maar voor dit project was hier helaas echt geen tijd voor.                        
+                    </p>
+                </div>
+            </div>
+
+            <div class="comp-card">
+                <span class="comp-badge">Competentie 3</span>
+                <h2>Bijdragen aan digitale transformatie</h2>
+                <div class="reflection-text">
+                    <p>
+                        Vanaf het begin van het project zijn we veel in gesprek geweest met medewerkers van het bedrijf. Het was belangrijk om een goed beeld te krijgen van de wensen van de klant. 
+                        Ik heb veel geleerd van dit project op het gebied van contact leggen met mensen binnen een bedrijf en hoe bedrijfsprocessen zijn geregeld binnen een bedrijf. In ons plan van aanpak heb ik gezocht naar de best mogelijke technologieën om een slimme oplossing te maken voor het probleem van elk®. 
+                        We hebben regelmatig contact opgenomen met de belangrijkste stakeholders zodat wij de juiste methodes en technologieën konden toepassen terwijl wij in ons achterhoofd de behoeften van de stakeholders hadden. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="comp-card">
+                <span class="comp-badge">Competentie 4</span>
+                <h2>Samenwerken in multidisciplinair team</h2>
+                <div class="reflection-text">
+                    <p>
+                        Het was erg leerzaam om samen in een multidisciplinair team aan een project te werken. Bij mijn andere groepsprojecten voor school waren er alleen maar groepsleden die dezelfde studie deden. Je hebt dan allemaal dezelfde vakken gehad en dus hetzelfde geleerd. 
+                        In zo'n multidisciplinair team is dat heel anders. Je merkt dat iedereen op andere gebieden kennis heeft. Daarom is het belangrijk om iedereens kwaliteiten te benutten en te leren van elkaar. 
+                        In dit project kwam zowel business als techniek bij elkaar en wij als groepje (met business en IT mensen) hebben elkaar mooi kunnen aanvullen en versterken. Als ik terugkijk hebben wij als team goed gepresteerd en heeft iedereen zijn kwaliteiten toegepast. 
+                        Ik vond het leuk om mijn kennis te delen met de rest maar ook om van hun te horen hoe zij over dingen denken vanuit een ander perspectief. Mijn teamleden gaven ook aan dat ik goed hulp aanbood. Daarnaast heb ik van mijn teamgenoten die business studeerde daar meer over kunnen leren, wat fijn was. 
+                        Iedereen stond ervoor open om naar elkaar te luisteren. Ik ben blij dat ik met dit groepje het project heb kunnen doen. Iedereen had ongeveer dezelfde doelen en de sfeer was goed. Daardoor was het samenwerken erg prettig. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="comp-card">
+                <span class="comp-badge">Competentie 5</span>
+                <h2>Professionele ontwikkeling</h2>
+                <div class="reflection-text">
+                    <p>
+                       Toen ik aan deze minor begon wilde ik graag mijn kennis verbreden door technologie te combineren met business. Het trok mij erg aan om aan een project te werken waarin veel aspecten worden behandeld en dus niet alleen de techniek. Ik wilde graag meer leren over de business dingen. 
+                       Maar daarnaast spraken de workshops over solderen en 3d ontwerpen mij ook erg aan. Ik heb zelf al ervaring met beide maar ik wilde graag kijken of ik hier meer kon leren. Tijdens mijn studie heb ik al veel geleerd over programmeren, maar ik hoopte tijdens de workshops wellicht iets extra's te leren. 
+                       Achteraf heb ik van de workshops techniek en programmeren een aantal dingen geleerd maar vooral nieuwe inspiratie opgedaan. De AI workshops gaven mij meer inzicht in wat AI voor bedrijven betekent. Dit is iets wat ik op mijn studie niet leer over AI dus dat was interessant. De Smart Technology workshops vond ik toch wel het leukste. 
+                       Vooral de workshop die ging over PCB ontwerpen was erg leuk. Van te voren leek het mij lastig om zelf zo'n PCB te maken. Maar wat bleek, dit was blijkbaar erg simpel door de stappen te volgen die wij kregen in de workshop. Ik had het al snel door en heb mijzelf verder uitgedaagd door een zo compact mogelijke PCB te ontwerpen. 
+                       Tijdens de workshop daarna waarin we leerde 3d ontwerpen heb ik helaas niks nieuws geleerd omdat ik zelf thuis een 3d printer heb en als hobby ook al designs maak. Maar ik vond het een hele leuke opdracht omdat ik voorheen nog niet elektronica en 3d printen heb gecombineerd maar ik wilde dat wel al een lange tijd graag doen. 
+                       Ik heb er veel tijd in gestoken om een slim ontwerp te maken waardoor ik mijn ervaring kon gebruiken om een mooi ontwerp neer te zetten en mijzelf uit te dagen. En hier heb ik zelf zeker van geleerd.  Ik had de ervaring daarnaast hard nodig omdat ik een zo compact en mooi mogelijk design wilde maken. 
+                       Mijn PCB had ik expres zo compact mogelijk gemaakt dus mijn 3d print behuizing moest dat natuurlijk ook zijn. Het koste wat tijd om te designen maar het heeft mij uitgedaagd om goed na te denken over het design. Toen ik een werkend concept had en een aantal verschillende test prints had gedaan paste alles. 
+                       Ik ben erg trots op het resultaat en heb mijn eigen verwachtingen overtroffen. Door de workshops ben ik zelf meer bezig gegaan met techniek/elektronica en 3d printen.
+                    </p>
+                    <p>
+                        Van business had ik relatief weinig kennis. Op de middelbare was ik erg goed in economie maar daarna heb ik nauwelijks les erover gehad op mijn studie. Het was interessant en leerzaam om de workshops van business te volgen. Van te voren had ik bijvoorbeeld nog nooit gehoord van al die business modellen zoals BMC. 
+                        Het was leuk om te zien dat bedrijven dit blijkbaar veel gebruiken en om het maken van een BMC te oefenen in een voorbeeld casus. Ik ben namelijk altijd een beetje geïnteresseerd geweest in het opstarten van een klein bedrijfje ooit in de toekomst. De workshops gaven mij hiervoor een beter beeld van hoe bedrijven opereren. 
+                        Dit is erg nuttig voor mijn ontwikkeling als digitale transformator omdat ik nu een beter beeld heb van hoe een bedrijf werkt. De workshop over Lean vond ik erg interessant omdat de methode eigenlijk heel logisch is maar ik er nog nooit eerder bij had stil gestaan, maar zodra de principes worden uitgelegd, 
+                        zie je direct hoe logisch het is om processen zo in te richten dat je precies levert wat de klant nodig heeft. In de workshop heb ik geleerd om te letten op verspillingen (muda) zoals wachten, onnodig transport, onnodige bewegingen, overproductie, defecten, overbodige bewerkingen, te grote voorraden en het niet benutten van de creativiteit van medewerkers. 
+                        Door deze principes toe te passen, leer je hoe je een organisatie kunt veranderen in een vloeiend proces waarin continu verbeteren en het oplossen van problemen centraal staan. Ik heb geleerd om kritisch te kijken naar een bedrijf om te vinden waar waarde verloren gaat. 
+                    </p>
+                    <p>
+                        Daarnaast heb ik er veel van geleerd om voor een bedrijf een project te doen en te zien hoe dingen in een bedrijf geregeld zijn. Maar ook dingen zoals email sturen. Ik had nog niet eerder echt mail contact gehad uit de naam van een bedrijf met andere bedrijven. 
+                        Hier heb ik dus nu een beeld bij en ik heb geleerd op welke manier je mensen kan benaderen. Gedurende het project keek ik af en toe terug naar mijn leerdoelen en eigenlijk na de eerste 4 weken liep dit al erg goed. 
+                        Ik was niet perfectionistisch en werkte aan de taken die belangrijk waren voor de klant. Mijn begeleider gaf nog feedback dat het belangrijk is om ook te bellen naar andere mensen in plaats van mailen. Hier kan ik mij goed in vinden. 
+                        Dit project had ik meer mogen bellen om mijn taak als digitale transformator beter uit te voeren. Door te bellen krijg je veel sneller antwoord en kunnen zaken sneller worden opgelost.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+    <div class="container text-center">
+      <p>© 2025 Luuk Veeken. Smart Industry Portfolio.</p>
+    </div>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/reflection.js"></script>
+</body>
+</html>

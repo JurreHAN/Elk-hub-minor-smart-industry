@@ -1,0 +1,421 @@
+body {
+    background-color: #f5f6fa; /* soft gray */
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    color: #212529;
+    flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+
+}
+
+main {
+    flex-grow: 1; /* makes main content expand to fill available space */
+}
+
+/* LinkedIn icon */
+.linkedin-icon {
+    color: #0A66C2;
+    margin-right: 0.3rem;
+}
+
+/* ============================
+   STOCK CARDS
+============================ */
+.card {
+    border-radius: 0.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card .card-title {
+    font-size: 1rem;
+}
+
+.card .display-5, .card .display-6 {
+    font-weight: bold;
+}
+
+#stock-change-percent {
+    font-weight: 600;
+    padding: 0.3rem 0.6rem;
+}
+
+/* Make all cards same height */
+.row.g-4 > .col-md-4 {
+    display: flex;
+}
+
+.row.g-4 > .col-md-4 .card {
+    flex: 1 1 auto;
+}
+
+/* ============================
+   STOCK CHART
+============================ */
+#stockChart {
+    min-height: 300px;
+}
+
+/* ============================
+   ALERT
+============================ */
+.alert-info {
+    background-color: #cfe2ff;
+    color: #084298;
+    border-radius: 0.75rem;
+    border-color: #084298;
+    font-weight: 500;
+}
+
+/* ============================
+   FOOTER
+============================ */
+footer {
+    background-color: #212529;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 991px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    header p.lead {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 575px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    .nav-link {
+        font-size: 0.9rem;
+    }
+}
+
+/* Hero Header */
+.hero-header {
+    position: relative;
+    color: #ffffff;
+    padding: 5rem 0;
+    text-align: center;
+    box-shadow: none;
+    overflow: hidden; /* ensures overlay stays inside */
+}
+
+.hero-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;  /* adjust transparency (0 = invisible, 1 = fully opaque) */
+    z-index: 0;
+}
+
+.stock-hero::before {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/001/220/903/non_2x/stock-market-graph-design-on-white-background-vector.jpg');
+}
+
+.projects-hero::before {
+    background-image: url('https://wallpapers.com/images/high/doodles-on-project-management-xwvsyosv7rb5my5r.webp');
+}
+
+.hero-header > * {
+    position: relative;
+    z-index: 1; /* keep content above the overlay */
+}
+
+.hero-header h1 {
+    margin-bottom: 1rem;
+    color: #0d1b3d; /* donkerblauw */
+}
+
+.hero-header p.lead {
+    font-size: 1.5rem;
+    color: #1a2a55; /* iets lichter donkerblauw voor subtitel */
+}
+
+/* Search form */
+#stock-form .form-control {
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtiele schaduw voor input */
+}
+
+#stock-form .btn {
+    border-radius: 0.5rem;
+}
+
+#stock-input {
+    height: 35px; /* desired height */
+    font-size: 0.9rem;
+    padding: 0 0.75rem;
+}
+
+#stock-form .btn {
+    height: 35px; /* match input height */
+    font-size: 0.9rem;
+    padding: 0 1rem;
+}
+
+/* Hero Section */
+.hero {
+  height: 40vh;
+  padding: 2rem;
+  background: #ffffff;
+  color: #212529;
+}
+
+/* Card Hover */
+.card-custom {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-custom:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  background: #212529;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+
+/* Typing effect */
+.typing::after {
+  content: ''; /* start with nothing */
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.typing.typing-active::after {
+  content: '|';
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.typing.done::after {
+  content: ''; /* remove cursor after typing */
+}
+
+.darkblue {
+    color: #212529;
+}
+
+/* Project cards hover effect */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 0.5rem;
+}
+
+.project-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+
+.navbar-nav .nav-link {
+    border-radius: 0.5rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(13,110,253,0.1); /* light blue background */
+    color: #0d6efd; /* primary color text */
+}
+
+.wave {
+  display: inline-block;
+  animation: wave 1.5s;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-8deg); }
+  45% { transform: rotate(18deg); }
+  60% { transform: rotate(-2deg); }
+  75% { transform: rotate(7deg); }
+}
+
+/* Card upgrade for Player and Clan search */
+.card.shadow-sm {
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: rgba(255, 255, 255, 0.95); /* slightly transparent for modern look */
+}
+
+.card.shadow-sm:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+}
+
+.card h5.card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0d1b3d;
+}
+
+.card p.card-text {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+#playerResult, #clanResult {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+}
+
+#playerResult h6, #clanResult h6 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+#playerResult p, #clanResult p {
+  margin: 0.25rem 0;
+}
+
+.input-group input.form-control {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.input-group button.btn {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+/* Player Card */
+.player-card {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.player-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+
+.player-card .player-header h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.player-card .player-header .player-tag {
+  font-size: 1rem;
+  color: #f0f0f0;
+}
+
+.player-card .player-stats p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+.player-card .player-deck {
+  margin-top: 1rem;
+}
+
+.player-card .player-deck h5,
+.player-card .favorite-card h5 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #ffeb3b;
+}
+
+.deck-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.deck-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.deck-card:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.favorite-card {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.favorite-card-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.favorite-card-info img {
+  width: 50px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .deck-cards {
+    justify-content: center;
+  }
+  .player-card {
+    padding: 1rem;
+  }
+}
+
+
+.deck-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.deck-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  width: 70px;
+  text-align: center;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.deck-card img {
+  width: 50px;
+  margin-bottom: 0.3rem;
+}
+
+.deck-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.favorite-card-info img {
+  width: 50px;
+  border-radius: 0.3rem;
+  margin-right: 0.5rem;
+}
+

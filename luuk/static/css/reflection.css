@@ -1,0 +1,142 @@
+/* Container voor de reflectie tekst */
+.reflection-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+}
+
+/* Specifieke Competentie Kaart (Glassmorphism effect bovenop base apple-card) */
+.comp-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease;
+}
+
+.comp-card:hover {
+    transform: translateY(-5px);
+}
+
+.comp-badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: rgba(0, 102, 204, 0.1);
+    color: var(--apple-blue);
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+h2 { font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+
+.reflection-text {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* Bewijs sectie binnen de kaart */
+.evidence-box {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    padding: 1.5rem;
+    border-left: 4px solid var(--apple-blue);
+}
+
+.evidence-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: var(--apple-text);
+}
+
+/* Back knop specifieke kleur */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--apple-gray);
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: color 0.2s;
+}
+.btn-back:hover { color: var(--apple-text); }
+
+/* --- SCROLL PROGRESS INDICATORS --- */
+.progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 9999;
+}
+
+.progress-bar {
+    height: 4px;
+    background: var(--apple-blue);
+    width: 0%;
+    transition: width 0.1s ease;
+}
+
+.scroll-nav {
+    position: fixed;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1000;
+}
+
+@media (max-width: 1100px) {
+    .scroll-nav { display: none; }
+}
+
+.scroll-dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    position: relative;
+}
+
+.scroll-dot.active {
+    background: var(--apple-blue);
+    transform: scale(1.5);
+}
+
+.scroll-dot::after {
+    content: attr(data-label);
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.scroll-dot:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+

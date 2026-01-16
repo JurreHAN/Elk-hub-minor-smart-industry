@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Luuk Veeken</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="stylesheet" href="../static/css/stylesheet.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+</head>
+
+<body>
+    <canvas id="matrixCanvas"></canvas>
+    <button id="matrixTrigger" class="secret-btn">_TAKE_CONTROL</button>
+
+    <div id="navbar"></div>
+
+    <div id="draggable-widget" class="minimized">
+        <div class="weather-input-group">
+            <input type="text" id="cityInput" class="weather-input" placeholder="City..." value="Nijmegen">
+            <button id="getWeatherBtn" class="btn-weather-search">
+                <i class="bi bi-search" style="font-size: 0.7rem;"></i>
+            </button>
+        </div>
+
+        <div id="weatherDisplay">
+            <div class="d-flex justify-content-between align-items-center">
+                <div id="temp-text-wrapper">
+                    <div class="temp-display" id="temp">--°</div>
+                    <div class="text-muted small fw-bold text-uppercase" id="condition">Loading</div>
+                </div>
+                <i id="weatherIcon" class="bi bi-cloud-sun weather-icon-large mx-auto"></i>
+            </div>
+        </div>
+    </div>
+
+    <main class="flex-grow-1">
+        <header class="hero-section container">
+            <div class="hero-eyebrow">Portfolio - Smart Industry</div>
+            <h1 class="hero-title">
+                <span class="typing wave-target" data-text="Hi there.">Hi there.</span>
+            </h1>
+            <div class="hero-desc">
+                <span class="typing" data-text="Luuk Veeken. Student Bioinformatics.">Luuk Veeken. Student Bioinformatics.</span>
+            </div>
+        </header>
+
+        <section id="sections" class="container bento-grid">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="apple-card">
+                        <div>
+                            <div class="card-sub">PROJECT</div>
+                            <h3 class="card-head">Smart Industry.<br>Smart Solutions.</h3>
+                            <p class="text-muted">A full overview of the Smart Plant Watering System I created.</p> 
+                        </div>
+                        <div class="text-end">
+                            <i class="bi bi-cpu icon-large text-secondary opacity-25"></i>
+                        </div>
+                        <span class="cta-link">View Projects <i class="bi bi-chevron-right"></i></span>
+                        <a href="all_projects.html" class="stretched-link"></a>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="apple-card card-dark">
+                        <div>
+                            <div class="card-sub">DATA API</div>
+                            <h3 class="card-head">Market Analytics.</h3>
+                            <p style="color: #a1a1a6;">Live tracking utilizing Alpha Vantage API.</p>
+                        </div>
+                        <div class="text-end">
+                             <i class="bi bi-graph-up-arrow icon-large" style="color: #30d158;"></i>
+                        </div>
+                        <span class="cta-link">See more <i class="bi bi-chevron-right"></i></span>
+                        <a href="stock.html" class="stretched-link"></a>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="apple-card flex-row align-items-center justify-content-between">
+                        <div>
+                            <div class="card-sub">CONNECT</div>
+                            <h3 class="card-head mb-0">Get in touch via LinkedIn.</h3>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-linkedin fs-1 me-4 text-primary"></i>
+                            <span class="cta-link fs-5">Visit Profile <i class="bi bi-chevron-right"></i></span>
+                        </div>
+                        <a href="https://www.linkedin.com/in/luuk-veeken/" target="_blank" class="stretched-link"></a>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="apple-card card-dark d-flex flex-column flex-md-row align-items-md-center justify-content-between p-4 p-md-5">
+                        <div class="mb-4 mb-md-0 pe-md-5">
+                            <div class="card-sub mb-2">THE USE OF AI</div>
+                            <h3 class="card-head mb-2">Transformation.</h3>
+                            <p class="mb-4" style="max-width: 450px; line-height: 1.6; color: #a1a1a6;">
+                                How I leveraged Artificial Intelligence as a powerful tool to level up my portfolio.
+                            </p>
+                            <span class="cta-link fs-6">
+                                Read Story <i class="bi bi-arrow-right ms-1"></i>
+                            </span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center bg-white bg-opacity-10 rounded-circle flex-shrink-0" 
+                            style="width: 80px; height: 80px; border: 1px solid rgba(255,255,255,0.1);">
+                            <i class="bi bi-stars" style="font-size: 2.5rem; color: #5ac8fa;"></i>
+                        </div>
+                        <a href="how_it_was_made.html" class="stretched-link"></a>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                <div class="apple-card d-flex flex-column flex-md-row align-items-md-center justify-content-between p-4 p-md-5" 
+                    style="min-height: auto; background: linear-gradient(135deg, #0066cc 0%, #003366 100%) !important; color: white;">
+                    <div class="mb-4 mb-md-0 pe-md-5">
+                        <div class="card-sub mb-1" style="color: rgba(255,255,255,0.7) !important; letter-spacing: 2px;">REFLECTION</div>
+                        <h3 class="card-head mb-2" style="color: white; font-size: 2.2rem;">Self-assessment.</h3>
+                        <p class="mb-3" style="max-width: 500px; color: rgba(255,255,255,0.8); line-height: 1.5;">
+                            My personal reflection on my competencies and growth as a "Digital Transformator".
+                        </p>
+                        <div class="d-inline-flex align-items-center mb-4 px-2 py-1" 
+                            style="background: rgba(255,255,255,0.15); border-radius: 6px; font-size: 0.75rem; border: 1px solid rgba(255,255,255,0.1);">
+                            <i class="bi bi-translate me-2"></i> Written in Dutch
+                        </div>
+                        <br>
+                        <span class="cta-link" style="color: white; font-weight: 600;">
+                            Read more <i class="bi bi-chevron-right ms-1"></i>
+                        </span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center flex-shrink-0" 
+                        style="width: 100px; height: 100px; background: rgba(255, 255, 255, 0.1); border-radius: 24px; border: 1px solid rgba(255,255,255,0.2);">
+                        <i class="bi bi-journal-check" style="font-size: 3.5rem; color: white; opacity: 0.9;"></i>
+                    </div>
+                    <a href="reflection.html" class="stretched-link"></a>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center">
+        <p class="mb-0">© 2025 Luuk Veeken. Smart Industry Portfolio.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/navbar.js"></script>
+    <script src="../static/js/weather.js"></script> 
+    <script src="../static/js/base.js"></script>
+</body>
+</html>
